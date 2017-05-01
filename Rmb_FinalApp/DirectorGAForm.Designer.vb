@@ -59,6 +59,8 @@ Partial Class DirectorGAForm
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Label55 = New System.Windows.Forms.Label()
+        Me.TextBox33 = New System.Windows.Forms.TextBox()
         Me.Label34 = New System.Windows.Forms.Label()
         Me.TextBox21 = New System.Windows.Forms.TextBox()
         Me.TextBox20 = New System.Windows.Forms.TextBox()
@@ -90,8 +92,6 @@ Partial Class DirectorGAForm
         Me.Label33 = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.Label54 = New System.Windows.Forms.Label()
-        Me.TextBox32 = New System.Windows.Forms.TextBox()
-        Me.Label53 = New System.Windows.Forms.Label()
         Me.Label52 = New System.Windows.Forms.Label()
         Me.Label51 = New System.Windows.Forms.Label()
         Me.TextBox31 = New System.Windows.Forms.TextBox()
@@ -127,8 +127,6 @@ Partial Class DirectorGAForm
         Me.Label49 = New System.Windows.Forms.Label()
         Me.Label50 = New System.Windows.Forms.Label()
         Me.DataGridView5 = New System.Windows.Forms.DataGridView()
-        Me.TextBox33 = New System.Windows.Forms.TextBox()
-        Me.Label55 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -526,6 +524,22 @@ Partial Class DirectorGAForm
         Me.TabPage2.Text = "GA Skills"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'Label55
+        '
+        Me.Label55.AutoSize = True
+        Me.Label55.Location = New System.Drawing.Point(97, 411)
+        Me.Label55.Name = "Label55"
+        Me.Label55.Size = New System.Drawing.Size(39, 13)
+        Me.Label55.TabIndex = 110
+        Me.Label55.Text = "Editing"
+        '
+        'TextBox33
+        '
+        Me.TextBox33.Location = New System.Drawing.Point(160, 408)
+        Me.TextBox33.Name = "TextBox33"
+        Me.TextBox33.Size = New System.Drawing.Size(52, 20)
+        Me.TextBox33.TabIndex = 109
+        '
         'Label34
         '
         Me.Label34.AutoSize = True
@@ -779,8 +793,6 @@ Partial Class DirectorGAForm
         'TabPage3
         '
         Me.TabPage3.Controls.Add(Me.Label54)
-        Me.TabPage3.Controls.Add(Me.TextBox32)
-        Me.TabPage3.Controls.Add(Me.Label53)
         Me.TabPage3.Controls.Add(Me.Label52)
         Me.TabPage3.Controls.Add(Me.Label51)
         Me.TabPage3.Controls.Add(Me.TextBox31)
@@ -810,32 +822,16 @@ Partial Class DirectorGAForm
         'Label54
         '
         Me.Label54.AutoSize = True
-        Me.Label54.Location = New System.Drawing.Point(97, 342)
+        Me.Label54.Location = New System.Drawing.Point(99, 302)
         Me.Label54.Name = "Label54"
         Me.Label54.Size = New System.Drawing.Size(380, 13)
         Me.Label54.TabIndex = 48
         Me.Label54.Text = "Display all supervisors (that don't have GA) and GAs that don't have supervisor "
         '
-        'TextBox32
-        '
-        Me.TextBox32.Location = New System.Drawing.Point(97, 21)
-        Me.TextBox32.Name = "TextBox32"
-        Me.TextBox32.Size = New System.Drawing.Size(126, 20)
-        Me.TextBox32.TabIndex = 47
-        '
-        'Label53
-        '
-        Me.Label53.AutoSize = True
-        Me.Label53.Location = New System.Drawing.Point(19, 21)
-        Me.Label53.Name = "Label53"
-        Me.Label53.Size = New System.Drawing.Size(58, 13)
-        Me.Label53.TabIndex = 46
-        Me.Label53.Text = "Director ID"
-        '
         'Label52
         '
         Me.Label52.AutoSize = True
-        Me.Label52.Location = New System.Drawing.Point(20, 461)
+        Me.Label52.Location = New System.Drawing.Point(22, 421)
         Me.Label52.Name = "Label52"
         Me.Label52.Size = New System.Drawing.Size(336, 26)
         Me.Label52.TabIndex = 45
@@ -845,7 +841,7 @@ Partial Class DirectorGAForm
         'Label51
         '
         Me.Label51.AutoSize = True
-        Me.Label51.Location = New System.Drawing.Point(10, 430)
+        Me.Label51.Location = New System.Drawing.Point(12, 390)
         Me.Label51.Name = "Label51"
         Me.Label51.Size = New System.Drawing.Size(97, 13)
         Me.Label51.TabIndex = 44
@@ -854,14 +850,14 @@ Partial Class DirectorGAForm
         '
         'TextBox31
         '
-        Me.TextBox31.Location = New System.Drawing.Point(114, 427)
+        Me.TextBox31.Location = New System.Drawing.Point(116, 387)
         Me.TextBox31.Name = "TextBox31"
         Me.TextBox31.Size = New System.Drawing.Size(109, 20)
         Me.TextBox31.TabIndex = 43
         '
         'TextBox30
         '
-        Me.TextBox30.Location = New System.Drawing.Point(114, 382)
+        Me.TextBox30.Location = New System.Drawing.Point(116, 342)
         Me.TextBox30.Name = "TextBox30"
         Me.TextBox30.Size = New System.Drawing.Size(109, 20)
         Me.TextBox30.TabIndex = 42
@@ -870,7 +866,7 @@ Partial Class DirectorGAForm
         '
         Me.Label41.AutoSize = True
         Me.Label41.ImageAlign = System.Drawing.ContentAlignment.TopRight
-        Me.Label41.Location = New System.Drawing.Point(20, 380)
+        Me.Label41.Location = New System.Drawing.Point(22, 340)
         Me.Label41.Name = "Label41"
         Me.Label41.Size = New System.Drawing.Size(84, 26)
         Me.Label41.TabIndex = 41
@@ -879,7 +875,7 @@ Partial Class DirectorGAForm
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(182, 511)
+        Me.Button1.Location = New System.Drawing.Point(184, 471)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(152, 23)
         Me.Button1.TabIndex = 13
@@ -889,7 +885,7 @@ Partial Class DirectorGAForm
         'Label40
         '
         Me.Label40.AutoSize = True
-        Me.Label40.Location = New System.Drawing.Point(20, 303)
+        Me.Label40.Location = New System.Drawing.Point(22, 263)
         Me.Label40.Name = "Label40"
         Me.Label40.Size = New System.Drawing.Size(88, 13)
         Me.Label40.TabIndex = 12
@@ -898,7 +894,7 @@ Partial Class DirectorGAForm
         'Label39
         '
         Me.Label39.AutoSize = True
-        Me.Label39.Location = New System.Drawing.Point(35, 263)
+        Me.Label39.Location = New System.Drawing.Point(37, 223)
         Me.Label39.Name = "Label39"
         Me.Label39.Size = New System.Drawing.Size(71, 13)
         Me.Label39.TabIndex = 11
@@ -906,28 +902,28 @@ Partial Class DirectorGAForm
         '
         'TextBox25
         '
-        Me.TextBox25.Location = New System.Drawing.Point(335, 303)
+        Me.TextBox25.Location = New System.Drawing.Point(337, 263)
         Me.TextBox25.Name = "TextBox25"
         Me.TextBox25.Size = New System.Drawing.Size(142, 20)
         Me.TextBox25.TabIndex = 10
         '
         'TextBox24
         '
-        Me.TextBox24.Location = New System.Drawing.Point(335, 261)
+        Me.TextBox24.Location = New System.Drawing.Point(337, 221)
         Me.TextBox24.Name = "TextBox24"
         Me.TextBox24.Size = New System.Drawing.Size(142, 20)
         Me.TextBox24.TabIndex = 9
         '
         'TextBox23
         '
-        Me.TextBox23.Location = New System.Drawing.Point(114, 303)
+        Me.TextBox23.Location = New System.Drawing.Point(116, 263)
         Me.TextBox23.Name = "TextBox23"
         Me.TextBox23.Size = New System.Drawing.Size(109, 20)
         Me.TextBox23.TabIndex = 8
         '
         'TextBox22
         '
-        Me.TextBox22.Location = New System.Drawing.Point(114, 261)
+        Me.TextBox22.Location = New System.Drawing.Point(116, 221)
         Me.TextBox22.Name = "TextBox22"
         Me.TextBox22.Size = New System.Drawing.Size(109, 20)
         Me.TextBox22.TabIndex = 7
@@ -935,7 +931,7 @@ Partial Class DirectorGAForm
         'Label38
         '
         Me.Label38.AutoSize = True
-        Me.Label38.Location = New System.Drawing.Point(283, 268)
+        Me.Label38.Location = New System.Drawing.Point(285, 228)
         Me.Label38.Name = "Label38"
         Me.Label38.Size = New System.Drawing.Size(36, 13)
         Me.Label38.TabIndex = 6
@@ -944,7 +940,7 @@ Partial Class DirectorGAForm
         'Label37
         '
         Me.Label37.AutoSize = True
-        Me.Label37.Location = New System.Drawing.Point(266, 306)
+        Me.Label37.Location = New System.Drawing.Point(268, 266)
         Me.Label37.Name = "Label37"
         Me.Label37.Size = New System.Drawing.Size(53, 13)
         Me.Label37.TabIndex = 5
@@ -953,7 +949,7 @@ Partial Class DirectorGAForm
         'Label36
         '
         Me.Label36.AutoSize = True
-        Me.Label36.Location = New System.Drawing.Point(287, 65)
+        Me.Label36.Location = New System.Drawing.Point(289, 25)
         Me.Label36.Name = "Label36"
         Me.Label36.Size = New System.Drawing.Size(75, 13)
         Me.Label36.TabIndex = 4
@@ -962,7 +958,7 @@ Partial Class DirectorGAForm
         'DataGridView4
         '
         Me.DataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView4.Location = New System.Drawing.Point(286, 87)
+        Me.DataGridView4.Location = New System.Drawing.Point(288, 47)
         Me.DataGridView4.Name = "DataGridView4"
         Me.DataGridView4.Size = New System.Drawing.Size(191, 150)
         Me.DataGridView4.TabIndex = 3
@@ -970,7 +966,7 @@ Partial Class DirectorGAForm
         'DataGridView3
         '
         Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView3.Location = New System.Drawing.Point(41, 87)
+        Me.DataGridView3.Location = New System.Drawing.Point(43, 47)
         Me.DataGridView3.Name = "DataGridView3"
         Me.DataGridView3.Size = New System.Drawing.Size(182, 150)
         Me.DataGridView3.TabIndex = 2
@@ -978,7 +974,7 @@ Partial Class DirectorGAForm
         'Label35
         '
         Me.Label35.AutoSize = True
-        Me.Label35.Location = New System.Drawing.Point(38, 65)
+        Me.Label35.Location = New System.Drawing.Point(40, 25)
         Me.Label35.Name = "Label35"
         Me.Label35.Size = New System.Drawing.Size(108, 13)
         Me.Label35.TabIndex = 1
@@ -1146,22 +1142,6 @@ Partial Class DirectorGAForm
         Me.DataGridView5.Size = New System.Drawing.Size(458, 182)
         Me.DataGridView5.TabIndex = 28
         '
-        'TextBox33
-        '
-        Me.TextBox33.Location = New System.Drawing.Point(160, 408)
-        Me.TextBox33.Name = "TextBox33"
-        Me.TextBox33.Size = New System.Drawing.Size(52, 20)
-        Me.TextBox33.TabIndex = 109
-        '
-        'Label55
-        '
-        Me.Label55.AutoSize = True
-        Me.Label55.Location = New System.Drawing.Point(97, 411)
-        Me.Label55.Name = "Label55"
-        Me.Label55.Size = New System.Drawing.Size(39, 13)
-        Me.Label55.TabIndex = 110
-        Me.Label55.Text = "Editing"
-        '
         'DirectorGAForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1256,8 +1236,6 @@ Partial Class DirectorGAForm
     Friend WithEvents Label33 As Label
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents Label54 As Label
-    Friend WithEvents TextBox32 As TextBox
-    Friend WithEvents Label53 As Label
     Friend WithEvents Label52 As Label
     Friend WithEvents Label51 As Label
     Friend WithEvents TextBox31 As TextBox

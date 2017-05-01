@@ -6,8 +6,12 @@ Public Class DirectorGAForm
         Dim con As OleDbCommand = New OleDbCommand()
         Dim tasksdataset As New DataSet()
         Dim gassignmentdataset As New DataSet()
+        Dim availablesupervisorsdataset As New DataSet()
+        Dim availablegasdataset As New DataSet()
         Dim adapter2 As New OleDbDataAdapter("select * from GAForm", reviewdataconnection)
         Dim gaskillsadapter As New OleDbDataAdapter("select * from ga", reviewdataconnection)
+        Dim availablesupervisorsadapter As New OleDbDataAdapter("select s.SupervisorID, concat(SuperVisorFname, ' ', SuperVisorLName) AS SupervisorName from gassignment gass RIGHT JOIN supervisor s on s.supervisorid = gass.supervisorid where GASS.SupervisorID IS NULL", reviewdataconnection)
+        Dim availablegastudentsadapter As New OleDbDataAdapter("select g.gaid, concat(ap.ApplicantFirstName, ' ', ap.ApplicantLastName) As GAName from gassignment gass RIGHT JOIN ga g on gass.gaid= g.gaid JOIN admitted a on g.admittedid = a.admittedid JOIN applicant ap on ap.applicantid = a.applicantid WHERE gass.gaid IS NULL", reviewdataconnection)
 
 
 
@@ -16,8 +20,12 @@ Public Class DirectorGAForm
         reviewdataconnection.Open()
         adapter2.Fill(tasksdataset)
         gaskillsadapter.Fill(gassignmentdataset)
+        availablesupervisorsadapter.Fill(availablesupervisorsdataset)
+        availablegastudentsadapter.Fill(availablegasdataset)
         DataGridView1.DataSource = tasksdataset.Tables(0).DefaultView
         DataGridView2.DataSource = gassignmentdataset.Tables(0).DefaultView
+        DataGridView3.DataSource = availablesupervisorsdataset.Tables(0).DefaultView
+        DataGridView4.DataSource = availablegasdataset.Tables(0).DefaultView
         reviewdataconnection.Close()
 
     End Sub
@@ -60,6 +68,22 @@ Public Class DirectorGAForm
         End If
     End Sub
 
+    Private Sub DataGridView3_CellEnter(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView3.CellEnter
+        If e.ColumnIndex >= 0 AndAlso e.RowIndex >= 0 Then
+            'Populate the textbox(s) to the specified column's value
+            TextBox22.Text = DataGridView3.Rows(e.RowIndex).Cells(0).Value.ToString()
+            TextBox23.Text = DataGridView3.Rows(e.RowIndex).Cells(1).Value.ToString()
+        End If
+    End Sub
+
+    Private Sub DataGridView4_CellEnter(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView4.CellEnter
+        If e.ColumnIndex >= 0 AndAlso e.RowIndex >= 0 Then
+            'Populate the textbox(s) to the specified column's value
+            TextBox24.Text = DataGridView4.Rows(e.RowIndex).Cells(0).Value.ToString()
+            TextBox25.Text = DataGridView4.Rows(e.RowIndex).Cells(1).Value.ToString()
+        End If
+    End Sub
+
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
         Dim reviewdataconnection As New OleDbConnection("Provider=SQLNCLI11;Server=msenterprise.waltoncollege.uark.edu;Database=PROJECTS1720;User Id=PROJECTS1720;Password=RR60ci$")
         Dim con As OleDbCommand = New OleDbCommand()
@@ -82,5 +106,29 @@ Public Class DirectorGAForm
         adapter2.Fill(tasksdataset)
         DataGridView2.DataSource = tasksdataset.Tables(0).DefaultView
         reviewdataconnection.Close()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Try
+            Dim Sqlstr As String
+            Dim Connectionstring As String = "Provider=SQLNCLI11;Server=msenterprise.waltoncollege.uark.edu;Database=PROJECTS1720;User Id=PROJECTS1720;Password=RR60ci$"
+            Sqlstr = "insert into GAssignment values (?, ?, ?, ?, ?)"
+            Dim sqlconnection As New OleDbConnection(Connectionstring)
+            Dim con As OleDbCommand = New OleDbCommand(Sqlstr, sqlconnection)
+            sqlconnection.Open()
+
+            'Begin SQL statements
+
+            con.Parameters.AddWithValue("GAID", Trim(TextBox24.Text))
+            con.Parameters.AddWithValue("SupervisorID", Trim(TextBox22.Text))
+            con.Parameters.AddWithValue("MemberID", 305)
+            con.Parameters.AddWithValue("Semester", Trim(TextBox31.Text))
+            con.Parameters.AddWithValue("Hours", Trim(TextBox30.Text))
+            con.ExecuteNonQuery()
+            MessageBox.Show("Done! To see the changes, please click the Refresh button On the form.")
+        Catch ex As Exception
+            MsgBox("The insertion failed. Please report the following error to the administrator:" & Environment.NewLine & vbCrLf & ex.Message)
+            Exit Sub
+        End Try
     End Sub
 End Class
