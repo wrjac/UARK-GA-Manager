@@ -25,6 +25,7 @@ Partial Class SupervisorTasks
         Me.Assign = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
@@ -43,6 +44,7 @@ Partial Class SupervisorTasks
         Me.Label26 = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox17 = New System.Windows.Forms.TextBox()
         Me.TextBox16 = New System.Windows.Forms.TextBox()
         Me.TextBox15 = New System.Windows.Forms.TextBox()
@@ -88,16 +90,14 @@ Partial Class SupervisorTasks
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Gassignmentdatagridview = New System.Windows.Forms.DataGridView()
         Me.Assign.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.TasksDataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Gassignmentdatagridview, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Assign
@@ -148,6 +148,13 @@ Partial Class SupervisorTasks
         Me.GroupBox1.TabIndex = 81
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Please fill out all fields"
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Location = New System.Drawing.Point(177, 282)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(149, 20)
+        Me.DateTimePicker1.TabIndex = 99
         '
         'Button2
         '
@@ -332,6 +339,15 @@ Partial Class SupervisorTasks
         Me.TabPage2.Text = "View Tasks"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(386, 455)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(95, 23)
+        Me.Button1.TabIndex = 86
+        Me.Button1.Text = "Update Task"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'TextBox17
         '
         Me.TextBox17.Location = New System.Drawing.Point(355, 351)
@@ -476,7 +492,7 @@ Partial Class SupervisorTasks
         'ComboBox12
         '
         Me.ComboBox12.FormattingEnabled = True
-        Me.ComboBox12.Items.AddRange(New Object() {"Not Started", "In Progress", "Completed"})
+        Me.ComboBox12.Items.AddRange(New Object() {"", "Not Started", "In Progress", "Completed"})
         Me.ComboBox12.Location = New System.Drawing.Point(83, 82)
         Me.ComboBox12.Name = "ComboBox12"
         Me.ComboBox12.Size = New System.Drawing.Size(126, 21)
@@ -582,7 +598,7 @@ Partial Class SupervisorTasks
         Me.TabPage3.Controls.Add(Me.Label15)
         Me.TabPage3.Controls.Add(Me.Label14)
         Me.TabPage3.Controls.Add(Me.Label13)
-        Me.TabPage3.Controls.Add(Me.DataGridView1)
+        Me.TabPage3.Controls.Add(Me.Gassignmentdatagridview)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
@@ -735,29 +751,14 @@ Partial Class SupervisorTasks
         Me.Label13.TabIndex = 29
         Me.Label13.Text = "GA Assignments"
         '
-        'DataGridView1
+        'Gassignmentdatagridview
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(32, 102)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(458, 146)
-        Me.DataGridView1.TabIndex = 28
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(386, 455)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(95, 23)
-        Me.Button1.TabIndex = 86
-        Me.Button1.Text = "Update Task"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(177, 282)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(149, 20)
-        Me.DateTimePicker1.TabIndex = 99
+        Me.Gassignmentdatagridview.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText
+        Me.Gassignmentdatagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Gassignmentdatagridview.Location = New System.Drawing.Point(32, 102)
+        Me.Gassignmentdatagridview.Name = "Gassignmentdatagridview"
+        Me.Gassignmentdatagridview.Size = New System.Drawing.Size(458, 146)
+        Me.Gassignmentdatagridview.TabIndex = 28
         '
         'SupervisorTasks
         '
@@ -776,7 +777,7 @@ Partial Class SupervisorTasks
         CType(Me.TasksDataGrid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Gassignmentdatagridview, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -830,7 +831,7 @@ Partial Class SupervisorTasks
     Friend WithEvents Label15 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents Label13 As Label
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Gassignmentdatagridview As DataGridView
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Button2 As Button
     Friend WithEvents TextBox1 As TextBox
