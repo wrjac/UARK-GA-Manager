@@ -97,7 +97,7 @@ Public Class SupervisorTasks
             TextBox4.Text = TasksDataGrid.Rows(e.RowIndex).Cells(8).Value.ToString()
             TextBox16.Text = TasksDataGrid.Rows(e.RowIndex).Cells(9).Value.ToString()
             TextBox17.Text = TasksDataGrid.Rows(e.RowIndex).Cells(10).Value.ToString()
-            TextBox10.Text = TasksDataGrid.Rows(e.RowIndex).Cells(11).Value.ToString()
+            RichTextBox2.Text = TasksDataGrid.Rows(e.RowIndex).Cells(11).Value.ToString()
 
 
         End If
