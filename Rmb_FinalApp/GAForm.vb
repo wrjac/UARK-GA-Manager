@@ -60,6 +60,7 @@ Public Class GAForm
 
         If e.ColumnIndex >= 0 AndAlso e.RowIndex >= 0 Then
             'Populate the textbox(s) to the specified column's value
+            TextBox11.Text = DataGridView2.Rows(e.RowIndex).Cells(0).Value.ToString()
             TextBox6.Text = DataGridView2.Rows(e.RowIndex).Cells(3).Value.ToString()
             RichTextBox1.Text = DataGridView2.Rows(e.RowIndex).Cells(4).Value.ToString()
             TextBox9.Text = DataGridView2.Rows(e.RowIndex).Cells(5).Value.ToString()
@@ -106,7 +107,7 @@ Public Class GAForm
         Try
             Dim Sqlstr As String
             Dim Connectionstring As String = "Provider=SQLNCLI11;Server=msenterprise.waltoncollege.uark.edu;Database=PROJECTS1720;User Id=PROJECTS1720;Password=RR60ci$"
-            Sqlstr = "UPDATE tasks SET TaskHoursCompleted = ?, TaskStatus = ?, Comments = ? WHERE GAID = ? "
+            Sqlstr = "UPDATE tasks SET TaskHoursCompleted = ?, TaskStatus = ?, Comments = ? WHERE TASKID = ?"
             Dim sqlconnection As New OleDbConnection(Connectionstring)
             Dim con As OleDbCommand = New OleDbCommand(Sqlstr, sqlconnection)
             sqlconnection.Open()
@@ -116,7 +117,7 @@ Public Class GAForm
             con.Parameters.AddWithValue("TaskHoursCompleted", Trim(TextBox10.Text))
             con.Parameters.AddWithValue("TaskStatus", Trim(ComboBox11.Text))
             con.Parameters.AddWithValue("Comments", Trim(RichTextBox2.Text))
-            con.Parameters.AddWithValue("GAID", Trim(TextBox7.Text))
+            con.Parameters.AddWithValue("TaskID", Trim(TextBox11.Text))
 
             con.ExecuteNonQuery()
             MessageBox.Show("Done! To see the changes, please click the Refresh button On the form.")

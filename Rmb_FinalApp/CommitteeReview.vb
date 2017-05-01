@@ -198,4 +198,8 @@ ORDER BY applicantrank asc;", customerdirectoryconnection)
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         MessageBox.Show("Success! Student is added to admitted student")
     End Sub
+
+    Private Sub DirectorGAFormToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DirectorGAFormToolStripMenuItem.Click
+        DirectorGAForm.Show()
+    End Sub
 End Class

@@ -41,6 +41,7 @@ Partial Class Committee_Review
         Me.Reviewtextbox = New System.Windows.Forms.RichTextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.DirectorGAFormToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.CommitteeDataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -166,6 +167,7 @@ Partial Class Committee_Review
         '
         'FormsToolStripMenuItem
         '
+        Me.FormsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DirectorGAFormToolStripMenuItem})
         Me.FormsToolStripMenuItem.Name = "FormsToolStripMenuItem"
         Me.FormsToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
         Me.FormsToolStripMenuItem.Text = "Forms"
@@ -203,6 +205,12 @@ Partial Class Committee_Review
         Me.Label6.Size = New System.Drawing.Size(98, 13)
         Me.Label6.TabIndex = 18
         Me.Label6.Text = "Review Comments:"
+        '
+        'DirectorGAFormToolStripMenuItem
+        '
+        Me.DirectorGAFormToolStripMenuItem.Name = "DirectorGAFormToolStripMenuItem"
+        Me.DirectorGAFormToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
+        Me.DirectorGAFormToolStripMenuItem.Text = "Director GA Form"
         '
         'Committee_Review
         '
@@ -254,4 +262,5 @@ Partial Class Committee_Review
     Friend WithEvents Reviewtextbox As RichTextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label6 As Label
+    Friend WithEvents DirectorGAFormToolStripMenuItem As ToolStripMenuItem
 End Class
