@@ -131,4 +131,56 @@ Public Class DirectorGAForm
             Exit Sub
         End Try
     End Sub
+
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+        If CheckBox1.Checked = True Then
+            Dim reviewdataconnection As New OleDbConnection("Provider=SQLNCLI11;Server=msenterprise.waltoncollege.uark.edu;Database=PROJECTS1720;User Id=PROJECTS1720;Password=RR60ci$")
+            Dim con As OleDbCommand = New OleDbCommand()
+            Dim tasksdataset As New DataSet()
+            Dim adapter2 As New OleDbDataAdapter("select DISTINCT s.SupervisorID, concat(SuperVisorFname, ' ', SuperVisorLName) AS SupervisorName, Semester from gassignment gass JOIN supervisor s on s.supervisorid = gass.supervisorid WHERE SEMESTER LIKE '" & Trim(TextBox31.Text) & "%'", reviewdataconnection)
+            con.Connection = reviewdataconnection
+            reviewdataconnection.Open()
+            adapter2.Fill(tasksdataset)
+            DataGridView3.DataSource = tasksdataset.Tables(0).DefaultView
+            reviewdataconnection.Close()
+
+        Else
+            Dim reviewdataconnection As New OleDbConnection("Provider=SQLNCLI11;Server=msenterprise.waltoncollege.uark.edu;Database=PROJECTS1720;User Id=PROJECTS1720;Password=RR60ci$")
+            Dim con As OleDbCommand = New OleDbCommand()
+            Dim tasksdataset As New DataSet()
+            Dim availablesupervisorsadapter As New OleDbDataAdapter("select s.SupervisorID, concat(SuperVisorFname, ' ', SuperVisorLName) AS SupervisorName from gassignment gass RIGHT JOIN supervisor s on s.supervisorid = gass.supervisorid where GASS.SupervisorID IS NULL", reviewdataconnection)
+            con.Connection = reviewdataconnection
+            reviewdataconnection.Open()
+            availablesupervisorsadapter.Fill(tasksdataset)
+            DataGridView3.DataSource = tasksdataset.Tables(0).DefaultView
+            reviewdataconnection.Close()
+
+        End If
+    End Sub
+
+    Private Sub TextBox31_TextChanged(sender As Object, e As EventArgs) Handles TextBox31.TextChanged
+        If CheckBox1.Checked = True Then
+            Dim reviewdataconnection As New OleDbConnection("Provider=SQLNCLI11;Server=msenterprise.waltoncollege.uark.edu;Database=PROJECTS1720;User Id=PROJECTS1720;Password=RR60ci$")
+            Dim con As OleDbCommand = New OleDbCommand()
+            Dim tasksdataset As New DataSet()
+            Dim adapter2 As New OleDbDataAdapter("select DISTINCT s.SupervisorID, concat(SuperVisorFname, ' ', SuperVisorLName) AS SupervisorName, Semester from gassignment gass JOIN supervisor s on s.supervisorid = gass.supervisorid WHERE SEMESTER LIKE '" & Trim(TextBox31.Text) & "%'", reviewdataconnection)
+            con.Connection = reviewdataconnection
+            reviewdataconnection.Open()
+            adapter2.Fill(tasksdataset)
+            DataGridView3.DataSource = tasksdataset.Tables(0).DefaultView
+            reviewdataconnection.Close()
+
+        ElseIf TextBox31.Text = "" Then
+            Dim reviewdataconnection As New OleDbConnection("Provider=SQLNCLI11;Server=msenterprise.waltoncollege.uark.edu;Database=PROJECTS1720;User Id=PROJECTS1720;Password=RR60ci$")
+            Dim con As OleDbCommand = New OleDbCommand()
+            Dim tasksdataset As New DataSet()
+            Dim availablesupervisorsadapter As New OleDbDataAdapter("select s.SupervisorID, concat(SuperVisorFname, ' ', SuperVisorLName) AS SupervisorName from gassignment gass RIGHT JOIN supervisor s on s.supervisorid = gass.supervisorid where GASS.SupervisorID IS NULL", reviewdataconnection)
+            con.Connection = reviewdataconnection
+            reviewdataconnection.Open()
+            availablesupervisorsadapter.Fill(tasksdataset)
+            DataGridView3.DataSource = tasksdataset.Tables(0).DefaultView
+            reviewdataconnection.Close()
+
+        End If
+    End Sub
 End Class
