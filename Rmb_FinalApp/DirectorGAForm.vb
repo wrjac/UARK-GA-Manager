@@ -8,10 +8,12 @@ Public Class DirectorGAForm
         Dim gassignmentdataset As New DataSet()
         Dim availablesupervisorsdataset As New DataSet()
         Dim availablegasdataset As New DataSet()
+        Dim gassginmentsdataset2 As New DataSet()
         Dim adapter2 As New OleDbDataAdapter("select * from GAForm", reviewdataconnection)
         Dim gaskillsadapter As New OleDbDataAdapter("select * from ga", reviewdataconnection)
-        Dim availablesupervisorsadapter As New OleDbDataAdapter("select s.SupervisorID, concat(SuperVisorFname, ' ', SuperVisorLName) AS SupervisorName from gassignment gass RIGHT JOIN supervisor s on s.supervisorid = gass.supervisorid where GASS.SupervisorID IS NULL", reviewdataconnection)
-        Dim availablegastudentsadapter As New OleDbDataAdapter("select g.gaid, concat(ap.ApplicantFirstName, ' ', ap.ApplicantLastName) As GAName from gassignment gass RIGHT JOIN ga g on gass.gaid= g.gaid JOIN admitted a on g.admittedid = a.admittedid JOIN applicant ap on ap.applicantid = a.applicantid WHERE gass.gaid IS NULL", reviewdataconnection)
+        Dim availablesupervisorsadapter As New OleDbDataAdapter("select DISTINCT s.SupervisorID, concat(SuperVisorFname, ' ', SuperVisorLName) AS SupervisorName, Semester from gassignment gass JOIN supervisor s on s.supervisorid = gass.supervisorid", reviewdataconnection)
+        Dim availablegastudentsadapter As New OleDbDataAdapter("select DISTINCT g.gaid, concat(ap.ApplicantFirstName, ' ', ap.ApplicantLastName) As GAName, Semester from gassignment gass JOIN ga g on gass.gaid= g.gaid  JOIN admitted a on g.admittedid = a.admittedid  JOIN applicant ap on ap.applicantid = a.applicantid", reviewdataconnection)
+        Dim gassignmentsadapter As New OleDbDataAdapter("select gass.GAssignmentID, ap.ApplicantID, ApplicantFirstName, ApplicantLastName, Semester, Hours, concat(SupervisorFName, ' ', SuperVisorLname) AS SupervisorName from gassignment gass join ga g on g.gaid = gass.gaid join supervisor s on s.supervisorid = gass.supervisorid join admitted a on g.admittedid = a.admittedid join applicant ap on ap.applicantid = a.ApplicantID", reviewdataconnection)
 
 
 
@@ -22,10 +24,12 @@ Public Class DirectorGAForm
         gaskillsadapter.Fill(gassignmentdataset)
         availablesupervisorsadapter.Fill(availablesupervisorsdataset)
         availablegastudentsadapter.Fill(availablegasdataset)
+        gassignmentsadapter.Fill(gassginmentsdataset2)
         DataGridView1.DataSource = tasksdataset.Tables(0).DefaultView
         DataGridView2.DataSource = gassignmentdataset.Tables(0).DefaultView
         DataGridView3.DataSource = availablesupervisorsdataset.Tables(0).DefaultView
         DataGridView4.DataSource = availablegasdataset.Tables(0).DefaultView
+        DataGridView5.DataSource = gassginmentsdataset2.Tables(0).DefaultView
         reviewdataconnection.Close()
 
     End Sub
@@ -83,6 +87,20 @@ Public Class DirectorGAForm
             TextBox25.Text = DataGridView4.Rows(e.RowIndex).Cells(1).Value.ToString()
         End If
     End Sub
+    Private Sub DataGridView5_CellEnter(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView5.CellEnter
+        If e.ColumnIndex >= 0 AndAlso e.RowIndex >= 0 Then
+            'Populate the textbox(s) to the specified column's value
+            TextBox35.Text = DataGridView5.Rows(e.RowIndex).Cells(0).Value.ToString()
+            TextBox29.Text = DataGridView5.Rows(e.RowIndex).Cells(1).Value.ToString()
+            TextBox32.Text = DataGridView5.Rows(e.RowIndex).Cells(2).Value.ToString()
+            TextBox34.Text = DataGridView5.Rows(e.RowIndex).Cells(3).Value.ToString()
+            TextBox28.Text = DataGridView5.Rows(e.RowIndex).Cells(6).Value.ToString()
+            TextBox26.Text = DataGridView5.Rows(e.RowIndex).Cells(5).Value.ToString()
+
+
+        End If
+    End Sub
+
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
         Dim reviewdataconnection As New OleDbConnection("Provider=SQLNCLI11;Server=msenterprise.waltoncollege.uark.edu;Database=PROJECTS1720;User Id=PROJECTS1720;Password=RR60ci$")
@@ -132,55 +150,55 @@ Public Class DirectorGAForm
         End Try
     End Sub
 
-    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
-        If CheckBox1.Checked = True Then
+    Private Sub TextBox27_TextChanged(sender As Object, e As EventArgs) Handles TextBox27.TextChanged
+        If TextBox27.Text <> "" Then
             Dim reviewdataconnection As New OleDbConnection("Provider=SQLNCLI11;Server=msenterprise.waltoncollege.uark.edu;Database=PROJECTS1720;User Id=PROJECTS1720;Password=RR60ci$")
             Dim con As OleDbCommand = New OleDbCommand()
             Dim tasksdataset As New DataSet()
-            Dim adapter2 As New OleDbDataAdapter("select DISTINCT s.SupervisorID, concat(SuperVisorFname, ' ', SuperVisorLName) AS SupervisorName, Semester from gassignment gass JOIN supervisor s on s.supervisorid = gass.supervisorid WHERE SEMESTER LIKE '" & Trim(TextBox31.Text) & "%'", reviewdataconnection)
+            Dim adapter2 As New OleDbDataAdapter("select gass.GAssignmentID, ap.ApplicantID, ApplicantFirstName, ApplicantLastName, Semester, Hours, concat(SupervisorFName, ' ', SuperVisorLname) AS SupervisorName from gassignment gass join ga g on g.gaid = gass.gaid join supervisor s on s.supervisorid = gass.supervisorid join admitted a on g.admittedid = a.admittedid join applicant ap on ap.applicantid = a.ApplicantID where Semester LIKE'" & Trim(TextBox27.Text) & "%'", reviewdataconnection)
             con.Connection = reviewdataconnection
             reviewdataconnection.Open()
             adapter2.Fill(tasksdataset)
-            DataGridView3.DataSource = tasksdataset.Tables(0).DefaultView
+            DataGridView5.DataSource = tasksdataset.Tables(0).DefaultView
             reviewdataconnection.Close()
-
         Else
             Dim reviewdataconnection As New OleDbConnection("Provider=SQLNCLI11;Server=msenterprise.waltoncollege.uark.edu;Database=PROJECTS1720;User Id=PROJECTS1720;Password=RR60ci$")
             Dim con As OleDbCommand = New OleDbCommand()
             Dim tasksdataset As New DataSet()
-            Dim availablesupervisorsadapter As New OleDbDataAdapter("select s.SupervisorID, concat(SuperVisorFname, ' ', SuperVisorLName) AS SupervisorName from gassignment gass RIGHT JOIN supervisor s on s.supervisorid = gass.supervisorid where GASS.SupervisorID IS NULL", reviewdataconnection)
+            Dim gassignmentsadapter As New OleDbDataAdapter("select gass.GAssignmentID, GAssignmentID, ap.ApplicantID, ApplicantFirstName, ApplicantLastName, Semester, Hours, concat(SupervisorFName, ' ', SuperVisorLname) AS SupervisorName from gassignment gass join ga g on g.gaid = gass.gaid join supervisor s on s.supervisorid = gass.supervisorid join admitted a on g.admittedid = a.admittedid join applicant ap on ap.applicantid = a.ApplicantID", reviewdataconnection)
             con.Connection = reviewdataconnection
             reviewdataconnection.Open()
-            availablesupervisorsadapter.Fill(tasksdataset)
-            DataGridView3.DataSource = tasksdataset.Tables(0).DefaultView
+            gassignmentsadapter.Fill(tasksdataset)
+            DataGridView5.DataSource = tasksdataset.Tables(0).DefaultView
             reviewdataconnection.Close()
 
         End If
     End Sub
 
-    Private Sub TextBox31_TextChanged(sender As Object, e As EventArgs) Handles TextBox31.TextChanged
-        If CheckBox1.Checked = True Then
-            Dim reviewdataconnection As New OleDbConnection("Provider=SQLNCLI11;Server=msenterprise.waltoncollege.uark.edu;Database=PROJECTS1720;User Id=PROJECTS1720;Password=RR60ci$")
-            Dim con As OleDbCommand = New OleDbCommand()
-            Dim tasksdataset As New DataSet()
-            Dim adapter2 As New OleDbDataAdapter("select DISTINCT s.SupervisorID, concat(SuperVisorFname, ' ', SuperVisorLName) AS SupervisorName, Semester from gassignment gass JOIN supervisor s on s.supervisorid = gass.supervisorid WHERE SEMESTER LIKE '" & Trim(TextBox31.Text) & "%'", reviewdataconnection)
-            con.Connection = reviewdataconnection
-            reviewdataconnection.Open()
-            adapter2.Fill(tasksdataset)
-            DataGridView3.DataSource = tasksdataset.Tables(0).DefaultView
-            reviewdataconnection.Close()
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Try
+            Dim Sqlstr As String
+            Dim Connectionstring As String = "Provider=SQLNCLI11;Server=msenterprise.waltoncollege.uark.edu;Database=PROJECTS1720;User Id=PROJECTS1720;Password=RR60ci$"
+            Sqlstr = " BEGIN TRANSACTION UPDATE GAssignment SET Hours = ? from gassignment WHERE GAssignmentID = ?; UPDATE Applicant SET ApplicantFirstName = ?, ApplicantLastName = ? WHERE ApplicantID = ? COMMIT; "
+            Dim sqlconnection As New OleDbConnection(Connectionstring)
+            Dim con As OleDbCommand = New OleDbCommand(Sqlstr, sqlconnection)
+            sqlconnection.Open()
 
-        ElseIf TextBox31.Text = "" Then
-            Dim reviewdataconnection As New OleDbConnection("Provider=SQLNCLI11;Server=msenterprise.waltoncollege.uark.edu;Database=PROJECTS1720;User Id=PROJECTS1720;Password=RR60ci$")
-            Dim con As OleDbCommand = New OleDbCommand()
-            Dim tasksdataset As New DataSet()
-            Dim availablesupervisorsadapter As New OleDbDataAdapter("select s.SupervisorID, concat(SuperVisorFname, ' ', SuperVisorLName) AS SupervisorName from gassignment gass RIGHT JOIN supervisor s on s.supervisorid = gass.supervisorid where GASS.SupervisorID IS NULL", reviewdataconnection)
-            con.Connection = reviewdataconnection
-            reviewdataconnection.Open()
-            availablesupervisorsadapter.Fill(tasksdataset)
-            DataGridView3.DataSource = tasksdataset.Tables(0).DefaultView
-            reviewdataconnection.Close()
+            'Begin SQL statements
+            con.Parameters.AddWithValue("Hours", Trim(TextBox26.Text))
+            con.Parameters.AddWithValue("gass.GAssignmentID", Trim(TextBox35.Text))
+            con.Parameters.AddWithValue("ap.ApplicantFirstname", Trim(TextBox32.Text))
+            con.Parameters.AddWithValue("ap.ApplicantLastName", Trim(TextBox34.Text))
+            con.Parameters.AddWithValue("ap.ApplicantID", Trim(TextBox29.Text))
 
-        End If
+
+
+            con.ExecuteNonQuery()
+            MessageBox.Show("Done! To see the changes, please click the Refresh button On the form.")
+        Catch ex As Exception
+            MsgBox("Please fill out all fields and make sure that you are using the GA ID assigned to you. If this fails, however, please report the following error to the administrator:" & Environment.NewLine & vbCrLf & ex.Message)
+        End Try
     End Sub
+
+
 End Class
