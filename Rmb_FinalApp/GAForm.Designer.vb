@@ -24,10 +24,7 @@ Partial Class GAForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.Label41 = New System.Windows.Forms.Label()
         Me.RichTextBox3 = New System.Windows.Forms.RichTextBox()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
@@ -75,18 +72,16 @@ Partial Class GAForm
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.Label44 = New System.Windows.Forms.Label()
+        Me.TextBox11 = New System.Windows.Forms.TextBox()
         Me.Refresh = New System.Windows.Forms.Button()
         Me.ComboBox12 = New System.Windows.Forms.ComboBox()
         Me.Label40 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Label39 = New System.Windows.Forms.Label()
-        Me.Label37 = New System.Windows.Forms.Label()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.Label38 = New System.Windows.Forms.Label()
         Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.Label36 = New System.Windows.Forms.Label()
-        Me.Label35 = New System.Windows.Forms.Label()
         Me.ComboBox11 = New System.Windows.Forms.ComboBox()
         Me.ComboBox9 = New System.Windows.Forms.ComboBox()
         Me.TextBox10 = New System.Windows.Forms.TextBox()
@@ -106,8 +101,6 @@ Partial Class GAForm
         Me.Label26 = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
-        Me.Label44 = New System.Windows.Forms.Label()
         Me.TabPage2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage1.SuspendLayout()
@@ -120,10 +113,7 @@ Partial Class GAForm
         '
         'TabPage2
         '
-        Me.TabPage2.Controls.Add(Me.Label41)
         Me.TabPage2.Controls.Add(Me.RichTextBox3)
-        Me.TabPage2.Controls.Add(Me.Label24)
-        Me.TabPage2.Controls.Add(Me.Label21)
         Me.TabPage2.Controls.Add(Me.TextBox5)
         Me.TabPage2.Controls.Add(Me.TextBox4)
         Me.TabPage2.Controls.Add(Me.TextBox3)
@@ -143,65 +133,38 @@ Partial Class GAForm
         Me.TabPage2.Text = "Assignment"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'Label41
-        '
-        Me.Label41.AutoSize = True
-        Me.Label41.Location = New System.Drawing.Point(242, 103)
-        Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(84, 13)
-        Me.Label41.TabIndex = 27
-        Me.Label41.Text = "Filter by this sem"
-        '
         'RichTextBox3
         '
-        Me.RichTextBox3.Location = New System.Drawing.Point(145, 371)
+        Me.RichTextBox3.Location = New System.Drawing.Point(113, 374)
         Me.RichTextBox3.Name = "RichTextBox3"
         Me.RichTextBox3.Size = New System.Drawing.Size(140, 39)
         Me.RichTextBox3.TabIndex = 26
         Me.RichTextBox3.Text = ""
         '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(311, 377)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(141, 26)
-        Me.Label24.TabIndex = 13
-        Me.Label24.Text = "Display these fields from the " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "GAassignment Entity"
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(252, 69)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(112, 13)
-        Me.Label21.TabIndex = 12
-        Me.Label21.Text = "type GAID and search"
-        '
         'TextBox5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(145, 428)
+        Me.TextBox5.Location = New System.Drawing.Point(113, 428)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(140, 20)
         Me.TextBox5.TabIndex = 10
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(94, 100)
+        Me.TextBox4.Location = New System.Drawing.Point(113, 103)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(126, 20)
         Me.TextBox4.TabIndex = 9
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(145, 341)
+        Me.TextBox3.Location = New System.Drawing.Point(113, 338)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(140, 20)
         Me.TextBox3.TabIndex = 8
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(94, 66)
+        Me.TextBox2.Location = New System.Drawing.Point(113, 66)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(126, 20)
         Me.TextBox2.TabIndex = 7
@@ -209,7 +172,7 @@ Partial Class GAForm
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(33, 431)
+        Me.Label18.Location = New System.Drawing.Point(20, 431)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(87, 13)
         Me.Label18.TabIndex = 6
@@ -218,7 +181,7 @@ Partial Class GAForm
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(15, 103)
+        Me.Label17.Location = New System.Drawing.Point(49, 103)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(51, 13)
         Me.Label17.TabIndex = 5
@@ -227,7 +190,7 @@ Partial Class GAForm
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(32, 376)
+        Me.Label16.Location = New System.Drawing.Point(19, 377)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(88, 13)
         Me.Label16.TabIndex = 4
@@ -236,7 +199,7 @@ Partial Class GAForm
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(33, 69)
+        Me.Label15.Location = New System.Drawing.Point(66, 69)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(33, 13)
         Me.Label15.TabIndex = 3
@@ -245,7 +208,7 @@ Partial Class GAForm
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(33, 341)
+        Me.Label14.Location = New System.Drawing.Point(57, 341)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(50, 13)
         Me.Label14.TabIndex = 2
@@ -264,7 +227,7 @@ Partial Class GAForm
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(18, 141)
+        Me.DataGridView1.Location = New System.Drawing.Point(69, 139)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(458, 182)
         Me.DataGridView1.TabIndex = 0
@@ -288,13 +251,13 @@ Partial Class GAForm
         Me.Label42.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label42.Location = New System.Drawing.Point(19, 13)
         Me.Label42.Name = "Label42"
-        Me.Label42.Size = New System.Drawing.Size(71, 16)
+        Me.Label42.Size = New System.Drawing.Size(78, 16)
         Me.Label42.TabIndex = 72
-        Me.Label42.Text = "GA Skills"
+        Me.Label42.Text = "GA Profile"
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(512, 556)
+        Me.Button1.Location = New System.Drawing.Point(511, 541)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 3
@@ -333,9 +296,9 @@ Partial Class GAForm
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.TextBox1)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(22, 49)
+        Me.GroupBox1.Location = New System.Drawing.Point(22, 45)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(473, 534)
+        Me.GroupBox1.Size = New System.Drawing.Size(473, 569)
         Me.GroupBox1.TabIndex = 71
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Please fill out all fields"
@@ -343,7 +306,7 @@ Partial Class GAForm
         'Label43
         '
         Me.Label43.AutoSize = True
-        Me.Label43.Location = New System.Drawing.Point(81, 322)
+        Me.Label43.Location = New System.Drawing.Point(76, 322)
         Me.Label43.Name = "Label43"
         Me.Label43.Size = New System.Drawing.Size(39, 13)
         Me.Label43.TabIndex = 100
@@ -376,7 +339,7 @@ Partial Class GAForm
         '
         'RichTextBox4
         '
-        Me.RichTextBox4.Location = New System.Drawing.Point(142, 213)
+        Me.RichTextBox4.Location = New System.Drawing.Point(138, 204)
         Me.RichTextBox4.Name = "RichTextBox4"
         Me.RichTextBox4.Size = New System.Drawing.Size(207, 39)
         Me.RichTextBox4.TabIndex = 96
@@ -386,7 +349,7 @@ Partial Class GAForm
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(25, 432)
+        Me.Label12.Location = New System.Drawing.Point(19, 443)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(98, 13)
         Me.Label12.TabIndex = 95
@@ -396,17 +359,18 @@ Partial Class GAForm
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(25, 456)
+        Me.Label11.Location = New System.Drawing.Point(20, 466)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(108, 52)
         Me.Label11.TabIndex = 94
         Me.Label11.Text = "Please provide your " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "availability during the " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "upcoming semester. " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(20 hours/ w" &
     "eek)."
+        Me.Label11.TextAlign = System.Drawing.ContentAlignment.BottomRight
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(31, 349)
+        Me.Label9.Location = New System.Drawing.Point(21, 349)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(95, 13)
         Me.Label9.TabIndex = 93
@@ -424,7 +388,7 @@ Partial Class GAForm
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(60, 294)
+        Me.Label10.Location = New System.Drawing.Point(52, 294)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(63, 13)
         Me.Label10.TabIndex = 91
@@ -461,7 +425,7 @@ Partial Class GAForm
         '
         Me.ComboBox6.FormattingEnabled = True
         Me.ComboBox6.Items.AddRange(New Object() {"0", "1", "2", "3", "4", "5"})
-        Me.ComboBox6.Location = New System.Drawing.Point(143, 182)
+        Me.ComboBox6.Location = New System.Drawing.Point(139, 173)
         Me.ComboBox6.Name = "ComboBox6"
         Me.ComboBox6.Size = New System.Drawing.Size(52, 21)
         Me.ComboBox6.TabIndex = 87
@@ -470,7 +434,7 @@ Partial Class GAForm
         '
         Me.ComboBox5.FormattingEnabled = True
         Me.ComboBox5.Items.AddRange(New Object() {"0", "1", "2", "3", "4", "5"})
-        Me.ComboBox5.Location = New System.Drawing.Point(143, 154)
+        Me.ComboBox5.Location = New System.Drawing.Point(139, 145)
         Me.ComboBox5.Name = "ComboBox5"
         Me.ComboBox5.Size = New System.Drawing.Size(52, 21)
         Me.ComboBox5.TabIndex = 86
@@ -479,7 +443,7 @@ Partial Class GAForm
         '
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Items.AddRange(New Object() {"0", "1", "2", "3", "4", "5"})
-        Me.ComboBox2.Location = New System.Drawing.Point(143, 123)
+        Me.ComboBox2.Location = New System.Drawing.Point(139, 114)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(52, 21)
         Me.ComboBox2.TabIndex = 85
@@ -488,7 +452,7 @@ Partial Class GAForm
         '
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"0", "1", "2", "3", "4", "5"})
-        Me.ComboBox1.Location = New System.Drawing.Point(143, 90)
+        Me.ComboBox1.Location = New System.Drawing.Point(139, 81)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(52, 21)
         Me.ComboBox1.TabIndex = 84
@@ -496,7 +460,7 @@ Partial Class GAForm
         'Label23
         '
         Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(25, 406)
+        Me.Label23.Location = New System.Drawing.Point(12, 408)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(105, 13)
         Me.Label23.TabIndex = 83
@@ -505,7 +469,7 @@ Partial Class GAForm
         'Label22
         '
         Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(35, 378)
+        Me.Label22.Location = New System.Drawing.Point(26, 378)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(89, 13)
         Me.Label22.TabIndex = 82
@@ -514,7 +478,7 @@ Partial Class GAForm
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(85, 265)
+        Me.Label20.Location = New System.Drawing.Point(73, 266)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(43, 13)
         Me.Label20.TabIndex = 81
@@ -524,7 +488,7 @@ Partial Class GAForm
         '
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(35, 243)
+        Me.Label19.Location = New System.Drawing.Point(43, 243)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(72, 13)
         Me.Label19.TabIndex = 80
@@ -534,7 +498,7 @@ Partial Class GAForm
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label8.Location = New System.Drawing.Point(91, 155)
+        Me.Label8.Location = New System.Drawing.Point(87, 146)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(28, 13)
         Me.Label8.TabIndex = 79
@@ -544,7 +508,7 @@ Partial Class GAForm
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label7.Location = New System.Drawing.Point(30, 213)
+        Me.Label7.Location = New System.Drawing.Point(26, 204)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(105, 13)
         Me.Label7.TabIndex = 78
@@ -555,7 +519,7 @@ Partial Class GAForm
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label6.Location = New System.Drawing.Point(52, 181)
+        Me.Label6.Location = New System.Drawing.Point(48, 172)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(68, 13)
         Me.Label6.TabIndex = 77
@@ -565,7 +529,7 @@ Partial Class GAForm
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label5.Location = New System.Drawing.Point(66, 128)
+        Me.Label5.Location = New System.Drawing.Point(62, 117)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(53, 13)
         Me.Label5.TabIndex = 76
@@ -575,7 +539,7 @@ Partial Class GAForm
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label4.Location = New System.Drawing.Point(52, 98)
+        Me.Label4.Location = New System.Drawing.Point(49, 84)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(67, 13)
         Me.Label4.TabIndex = 75
@@ -585,7 +549,7 @@ Partial Class GAForm
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(140, 51)
+        Me.Label3.Location = New System.Drawing.Point(136, 42)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(153, 26)
         Me.Label3.TabIndex = 74
@@ -595,7 +559,7 @@ Partial Class GAForm
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(25, 64)
+        Me.Label2.Location = New System.Drawing.Point(21, 55)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(94, 13)
         Me.Label2.TabIndex = 73
@@ -636,14 +600,10 @@ Partial Class GAForm
         Me.TabPage3.Controls.Add(Me.ComboBox12)
         Me.TabPage3.Controls.Add(Me.Label40)
         Me.TabPage3.Controls.Add(Me.Button2)
-        Me.TabPage3.Controls.Add(Me.Label39)
-        Me.TabPage3.Controls.Add(Me.Label37)
         Me.TabPage3.Controls.Add(Me.TextBox7)
         Me.TabPage3.Controls.Add(Me.Label38)
         Me.TabPage3.Controls.Add(Me.RichTextBox2)
         Me.TabPage3.Controls.Add(Me.RichTextBox1)
-        Me.TabPage3.Controls.Add(Me.Label36)
-        Me.TabPage3.Controls.Add(Me.Label35)
         Me.TabPage3.Controls.Add(Me.ComboBox11)
         Me.TabPage3.Controls.Add(Me.ComboBox9)
         Me.TabPage3.Controls.Add(Me.TextBox10)
@@ -669,6 +629,22 @@ Partial Class GAForm
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Weekly Tasks"
         Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'Label44
+        '
+        Me.Label44.AutoSize = True
+        Me.Label44.Location = New System.Drawing.Point(290, 335)
+        Me.Label44.Name = "Label44"
+        Me.Label44.Size = New System.Drawing.Size(71, 13)
+        Me.Label44.TabIndex = 35
+        Me.Label44.Text = "Task Number"
+        '
+        'TextBox11
+        '
+        Me.TextBox11.Location = New System.Drawing.Point(367, 332)
+        Me.TextBox11.Name = "TextBox11"
+        Me.TextBox11.Size = New System.Drawing.Size(157, 20)
+        Me.TextBox11.TabIndex = 34
         '
         'Refresh
         '
@@ -706,24 +682,6 @@ Partial Class GAForm
         Me.Button2.Text = "Submit"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Label39
-        '
-        Me.Label39.AutoSize = True
-        Me.Label39.Location = New System.Drawing.Point(423, 62)
-        Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(155, 13)
-        Me.Label39.TabIndex = 29
-        Me.Label39.Text = "Get columns off the Task Entity"
-        '
-        'Label37
-        '
-        Me.Label37.AutoSize = True
-        Me.Label37.Location = New System.Drawing.Point(247, 58)
-        Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(155, 13)
-        Me.Label37.TabIndex = 28
-        Me.Label37.Text = "type GAID and search for tasks"
-        '
         'TextBox7
         '
         Me.TextBox7.Location = New System.Drawing.Point(89, 55)
@@ -742,7 +700,7 @@ Partial Class GAForm
         '
         'RichTextBox2
         '
-        Me.RichTextBox2.Location = New System.Drawing.Point(367, 456)
+        Me.RichTextBox2.Location = New System.Drawing.Point(367, 442)
         Me.RichTextBox2.Name = "RichTextBox2"
         Me.RichTextBox2.Size = New System.Drawing.Size(157, 61)
         Me.RichTextBox2.TabIndex = 25
@@ -757,29 +715,11 @@ Partial Class GAForm
         Me.RichTextBox1.TabIndex = 24
         Me.RichTextBox1.Text = ""
         '
-        'Label36
-        '
-        Me.Label36.AutoSize = True
-        Me.Label36.Location = New System.Drawing.Point(388, 332)
-        Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(100, 13)
-        Me.Label36.TabIndex = 23
-        Me.Label36.Text = "stuff the GA will edit"
-        '
-        'Label35
-        '
-        Me.Label35.AutoSize = True
-        Me.Label35.Location = New System.Drawing.Point(101, 306)
-        Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(78, 13)
-        Me.Label35.TabIndex = 22
-        Me.Label35.Text = "Read only stuff"
-        '
         'ComboBox11
         '
         Me.ComboBox11.FormattingEnabled = True
         Me.ComboBox11.Items.AddRange(New Object() {"Not Started", "In Progress", "Completed"})
-        Me.ComboBox11.Location = New System.Drawing.Point(367, 420)
+        Me.ComboBox11.Location = New System.Drawing.Point(367, 395)
         Me.ComboBox11.Name = "ComboBox11"
         Me.ComboBox11.Size = New System.Drawing.Size(157, 21)
         Me.ComboBox11.TabIndex = 21
@@ -796,7 +736,7 @@ Partial Class GAForm
         '
         'TextBox10
         '
-        Me.TextBox10.Location = New System.Drawing.Point(367, 389)
+        Me.TextBox10.Location = New System.Drawing.Point(367, 366)
         Me.TextBox10.Name = "TextBox10"
         Me.TextBox10.Size = New System.Drawing.Size(157, 20)
         Me.TextBox10.TabIndex = 17
@@ -841,7 +781,7 @@ Partial Class GAForm
         'Label34
         '
         Me.Label34.AutoSize = True
-        Me.Label34.Location = New System.Drawing.Point(275, 453)
+        Me.Label34.Location = New System.Drawing.Point(305, 445)
         Me.Label34.Name = "Label34"
         Me.Label34.Size = New System.Drawing.Size(56, 13)
         Me.Label34.TabIndex = 10
@@ -850,7 +790,7 @@ Partial Class GAForm
         'Label33
         '
         Me.Label33.AutoSize = True
-        Me.Label33.Location = New System.Drawing.Point(273, 420)
+        Me.Label33.Location = New System.Drawing.Point(297, 398)
         Me.Label33.Name = "Label33"
         Me.Label33.Size = New System.Drawing.Size(64, 13)
         Me.Label33.TabIndex = 9
@@ -886,7 +826,7 @@ Partial Class GAForm
         'Label29
         '
         Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(273, 389)
+        Me.Label29.Location = New System.Drawing.Point(273, 369)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(88, 13)
         Me.Label29.TabIndex = 5
@@ -913,7 +853,7 @@ Partial Class GAForm
         'DataGridView2
         '
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(29, 118)
+        Me.DataGridView2.Location = New System.Drawing.Point(29, 135)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.Size = New System.Drawing.Size(549, 174)
         Me.DataGridView2.TabIndex = 2
@@ -937,27 +877,11 @@ Partial Class GAForm
         Me.Label25.TabIndex = 0
         Me.Label25.Text = "Weekly Task Information"
         '
-        'TextBox11
-        '
-        Me.TextBox11.Location = New System.Drawing.Point(480, 363)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(44, 20)
-        Me.TextBox11.TabIndex = 34
-        '
-        'Label44
-        '
-        Me.Label44.AutoSize = True
-        Me.Label44.Location = New System.Drawing.Point(275, 365)
-        Me.Label44.Name = "Label44"
-        Me.Label44.Size = New System.Drawing.Size(71, 13)
-        Me.Label44.TabIndex = 35
-        Me.Label44.Text = "Task Number"
-        '
         'GAForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(726, 599)
+        Me.ClientSize = New System.Drawing.Size(673, 599)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "GAForm"
         Me.Text = "GAForm"
@@ -979,8 +903,6 @@ Partial Class GAForm
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
-    Friend WithEvents Label24 As System.Windows.Forms.Label
-    Friend WithEvents Label21 As System.Windows.Forms.Label
     Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
@@ -999,14 +921,10 @@ Partial Class GAForm
     Friend WithEvents Label25 As System.Windows.Forms.Label
     Friend WithEvents RichTextBox3 As System.Windows.Forms.RichTextBox
     Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Label39 As System.Windows.Forms.Label
-    Friend WithEvents Label37 As System.Windows.Forms.Label
     Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
     Friend WithEvents Label38 As System.Windows.Forms.Label
     Friend WithEvents RichTextBox2 As System.Windows.Forms.RichTextBox
     Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
-    Friend WithEvents Label36 As System.Windows.Forms.Label
-    Friend WithEvents Label35 As System.Windows.Forms.Label
     Friend WithEvents ComboBox11 As System.Windows.Forms.ComboBox
     Friend WithEvents TextBox10 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox9 As System.Windows.Forms.TextBox
@@ -1024,7 +942,6 @@ Partial Class GAForm
     Friend WithEvents ComboBox12 As System.Windows.Forms.ComboBox
     Friend WithEvents Label40 As System.Windows.Forms.Label
     Friend WithEvents BindingSource1 As System.Windows.Forms.BindingSource
-    Friend WithEvents Label41 As System.Windows.Forms.Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents RichTextBox6 As RichTextBox
     Friend WithEvents RichTextBox5 As RichTextBox

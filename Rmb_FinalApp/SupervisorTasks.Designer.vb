@@ -48,7 +48,6 @@ Partial Class SupervisorTasks
         Me.TextBox17 = New System.Windows.Forms.TextBox()
         Me.TextBox16 = New System.Windows.Forms.TextBox()
         Me.TextBox15 = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.RichTextBox3 = New System.Windows.Forms.RichTextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
@@ -64,8 +63,6 @@ Partial Class SupervisorTasks
         Me.Label9 = New System.Windows.Forms.Label()
         Me.ComboBox12 = New System.Windows.Forms.ComboBox()
         Me.Label40 = New System.Windows.Forms.Label()
-        Me.Label39 = New System.Windows.Forms.Label()
-        Me.Label37 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TasksDataGrid = New System.Windows.Forms.DataGridView()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -73,13 +70,9 @@ Partial Class SupervisorTasks
         Me.Label33 = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.Label12 = New System.Windows.Forms.Label()
         Me.RichTextBox5 = New System.Windows.Forms.RichTextBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label41 = New System.Windows.Forms.Label()
         Me.RichTextBox4 = New System.Windows.Forms.RichTextBox()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
         Me.TextBox11 = New System.Windows.Forms.TextBox()
         Me.TextBox12 = New System.Windows.Forms.TextBox()
         Me.TextBox13 = New System.Windows.Forms.TextBox()
@@ -114,12 +107,13 @@ Partial Class SupervisorTasks
         'TabPage1
         '
         Me.TabPage1.Controls.Add(Me.GroupBox1)
+        Me.TabPage1.Controls.Add(Me.Label25)
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage1.Size = New System.Drawing.Size(547, 538)
         Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "New Tasks"
+        Me.TabPage1.Text = "Create Tasks"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
         'GroupBox1
@@ -141,24 +135,23 @@ Partial Class SupervisorTasks
         Me.GroupBox1.Controls.Add(Me.Label28)
         Me.GroupBox1.Controls.Add(Me.Label27)
         Me.GroupBox1.Controls.Add(Me.Label26)
-        Me.GroupBox1.Controls.Add(Me.Label25)
-        Me.GroupBox1.Location = New System.Drawing.Point(18, 6)
+        Me.GroupBox1.Location = New System.Drawing.Point(18, 39)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(495, 494)
+        Me.GroupBox1.Size = New System.Drawing.Size(495, 461)
         Me.GroupBox1.TabIndex = 81
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Please fill out all fields"
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(177, 282)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(180, 282)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(149, 20)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(155, 20)
         Me.DateTimePicker1.TabIndex = 99
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(202, 390)
+        Me.Button2.Location = New System.Drawing.Point(199, 394)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(105, 23)
         Me.Button2.TabIndex = 97
@@ -240,7 +233,7 @@ Partial Class SupervisorTasks
         'Label32
         '
         Me.Label32.AutoSize = True
-        Me.Label32.Location = New System.Drawing.Point(133, 313)
+        Me.Label32.Location = New System.Drawing.Point(132, 316)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(38, 13)
         Me.Label32.TabIndex = 86
@@ -249,7 +242,7 @@ Partial Class SupervisorTasks
         'Label31
         '
         Me.Label31.AutoSize = True
-        Me.Label31.Location = New System.Drawing.Point(87, 289)
+        Me.Label31.Location = New System.Drawing.Point(90, 282)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(80, 13)
         Me.Label31.TabIndex = 85
@@ -258,7 +251,7 @@ Partial Class SupervisorTasks
         'Label30
         '
         Me.Label30.AutoSize = True
-        Me.Label30.Location = New System.Drawing.Point(113, 247)
+        Me.Label30.Location = New System.Drawing.Point(111, 250)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(58, 13)
         Me.Label30.TabIndex = 84
@@ -267,7 +260,7 @@ Partial Class SupervisorTasks
         'Label28
         '
         Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(93, 350)
+        Me.Label28.Location = New System.Drawing.Point(87, 350)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(83, 13)
         Me.Label28.TabIndex = 83
@@ -276,7 +269,7 @@ Partial Class SupervisorTasks
         'Label27
         '
         Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(87, 156)
+        Me.Label27.Location = New System.Drawing.Point(87, 159)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(90, 13)
         Me.Label27.TabIndex = 82
@@ -285,7 +278,7 @@ Partial Class SupervisorTasks
         'Label26
         '
         Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(109, 122)
+        Me.Label26.Location = New System.Drawing.Point(111, 122)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(62, 13)
         Me.Label26.TabIndex = 81
@@ -295,7 +288,7 @@ Partial Class SupervisorTasks
         '
         Me.Label25.AutoSize = True
         Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(31, 16)
+        Me.Label25.Location = New System.Drawing.Point(15, 14)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(128, 13)
         Me.Label25.TabIndex = 79
@@ -307,7 +300,6 @@ Partial Class SupervisorTasks
         Me.TabPage2.Controls.Add(Me.TextBox17)
         Me.TabPage2.Controls.Add(Me.TextBox16)
         Me.TabPage2.Controls.Add(Me.TextBox15)
-        Me.TabPage2.Controls.Add(Me.Label10)
         Me.TabPage2.Controls.Add(Me.RichTextBox3)
         Me.TabPage2.Controls.Add(Me.TextBox3)
         Me.TabPage2.Controls.Add(Me.TextBox4)
@@ -323,8 +315,6 @@ Partial Class SupervisorTasks
         Me.TabPage2.Controls.Add(Me.Label9)
         Me.TabPage2.Controls.Add(Me.ComboBox12)
         Me.TabPage2.Controls.Add(Me.Label40)
-        Me.TabPage2.Controls.Add(Me.Label39)
-        Me.TabPage2.Controls.Add(Me.Label37)
         Me.TabPage2.Controls.Add(Me.Label2)
         Me.TabPage2.Controls.Add(Me.TasksDataGrid)
         Me.TabPage2.Controls.Add(Me.Label3)
@@ -341,7 +331,7 @@ Partial Class SupervisorTasks
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(386, 455)
+        Me.Button1.Location = New System.Drawing.Point(385, 460)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(95, 23)
         Me.Button1.TabIndex = 86
@@ -371,15 +361,6 @@ Partial Class SupervisorTasks
         Me.TextBox15.ReadOnly = True
         Me.TextBox15.Size = New System.Drawing.Size(133, 20)
         Me.TextBox15.TabIndex = 83
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(275, 522)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(121, 13)
-        Me.Label10.TabIndex = 82
-        Me.Label10.Text = "display from the datagrid"
         '
         'RichTextBox3
         '
@@ -415,7 +396,7 @@ Partial Class SupervisorTasks
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(83, 46)
+        Me.TextBox2.Location = New System.Drawing.Point(114, 50)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(126, 20)
         Me.TextBox2.TabIndex = 64
@@ -493,7 +474,7 @@ Partial Class SupervisorTasks
         '
         Me.ComboBox12.FormattingEnabled = True
         Me.ComboBox12.Items.AddRange(New Object() {"", "Not Started", "In Progress", "Completed"})
-        Me.ComboBox12.Location = New System.Drawing.Point(83, 82)
+        Me.ComboBox12.Location = New System.Drawing.Point(114, 86)
         Me.ComboBox12.Name = "ComboBox12"
         Me.ComboBox12.Size = New System.Drawing.Size(126, 21)
         Me.ComboBox12.TabIndex = 68
@@ -501,34 +482,16 @@ Partial Class SupervisorTasks
         'Label40
         '
         Me.Label40.AutoSize = True
-        Me.Label40.Location = New System.Drawing.Point(13, 85)
+        Me.Label40.Location = New System.Drawing.Point(42, 86)
         Me.Label40.Name = "Label40"
         Me.Label40.Size = New System.Drawing.Size(64, 13)
         Me.Label40.TabIndex = 67
         Me.Label40.Text = "Task Status"
         '
-        'Label39
-        '
-        Me.Label39.AutoSize = True
-        Me.Label39.Location = New System.Drawing.Point(241, 72)
-        Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(155, 13)
-        Me.Label39.TabIndex = 66
-        Me.Label39.Text = "Get columns off the Task Entity"
-        '
-        'Label37
-        '
-        Me.Label37.AutoSize = True
-        Me.Label37.Location = New System.Drawing.Point(241, 49)
-        Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(155, 13)
-        Me.Label37.TabIndex = 65
-        Me.Label37.Text = "type GAID and search for tasks"
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(22, 49)
+        Me.Label2.Location = New System.Drawing.Point(73, 53)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(33, 13)
         Me.Label2.TabIndex = 63
@@ -537,7 +500,7 @@ Partial Class SupervisorTasks
         'TasksDataGrid
         '
         Me.TasksDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.TasksDataGrid.Location = New System.Drawing.Point(23, 127)
+        Me.TasksDataGrid.Location = New System.Drawing.Point(23, 121)
         Me.TasksDataGrid.Name = "TasksDataGrid"
         Me.TasksDataGrid.Size = New System.Drawing.Size(502, 174)
         Me.TasksDataGrid.TabIndex = 62
@@ -581,13 +544,9 @@ Partial Class SupervisorTasks
         '
         'TabPage3
         '
-        Me.TabPage3.Controls.Add(Me.Label12)
         Me.TabPage3.Controls.Add(Me.RichTextBox5)
         Me.TabPage3.Controls.Add(Me.Label11)
-        Me.TabPage3.Controls.Add(Me.Label41)
         Me.TabPage3.Controls.Add(Me.RichTextBox4)
-        Me.TabPage3.Controls.Add(Me.Label24)
-        Me.TabPage3.Controls.Add(Me.Label21)
         Me.TabPage3.Controls.Add(Me.TextBox11)
         Me.TabPage3.Controls.Add(Me.TextBox12)
         Me.TabPage3.Controls.Add(Me.TextBox13)
@@ -607,18 +566,9 @@ Partial Class SupervisorTasks
         Me.TabPage3.Text = "Assignment"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(139, 460)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(171, 13)
-        Me.Label12.TabIndex = 45
-        Me.Label12.Text = "Display this field from the GA Table" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        '
         'RichTextBox5
         '
-        Me.RichTextBox5.Location = New System.Drawing.Point(159, 402)
+        Me.RichTextBox5.Location = New System.Drawing.Point(159, 386)
         Me.RichTextBox5.Name = "RichTextBox5"
         Me.RichTextBox5.Size = New System.Drawing.Size(140, 55)
         Me.RichTextBox5.TabIndex = 44
@@ -627,20 +577,11 @@ Partial Class SupervisorTasks
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(48, 402)
+        Me.Label11.Location = New System.Drawing.Point(78, 389)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(56, 13)
         Me.Label11.TabIndex = 43
         Me.Label11.Text = "Availability"
-        '
-        'Label41
-        '
-        Me.Label41.AutoSize = True
-        Me.Label41.Location = New System.Drawing.Point(256, 79)
-        Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(84, 13)
-        Me.Label41.TabIndex = 42
-        Me.Label41.Text = "Filter by this sem"
         '
         'RichTextBox4
         '
@@ -650,34 +591,16 @@ Partial Class SupervisorTasks
         Me.RichTextBox4.TabIndex = 41
         Me.RichTextBox4.Text = ""
         '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(325, 305)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(141, 26)
-        Me.Label24.TabIndex = 40
-        Me.Label24.Text = "Display these fields from the " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "GAassignment Entity"
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(266, 45)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(147, 13)
-        Me.Label21.TabIndex = 39
-        Me.Label21.Text = "type SupervisorID and search"
-        '
         'TextBox11
         '
-        Me.TextBox11.Location = New System.Drawing.Point(159, 356)
+        Me.TextBox11.Location = New System.Drawing.Point(159, 354)
         Me.TextBox11.Name = "TextBox11"
         Me.TextBox11.Size = New System.Drawing.Size(140, 20)
         Me.TextBox11.TabIndex = 38
         '
         'TextBox12
         '
-        Me.TextBox12.Location = New System.Drawing.Point(108, 76)
+        Me.TextBox12.Location = New System.Drawing.Point(159, 79)
         Me.TextBox12.Name = "TextBox12"
         Me.TextBox12.Size = New System.Drawing.Size(126, 20)
         Me.TextBox12.TabIndex = 37
@@ -691,7 +614,7 @@ Partial Class SupervisorTasks
         '
         'TextBox14
         '
-        Me.TextBox14.Location = New System.Drawing.Point(108, 42)
+        Me.TextBox14.Location = New System.Drawing.Point(159, 45)
         Me.TextBox14.Name = "TextBox14"
         Me.TextBox14.Size = New System.Drawing.Size(126, 20)
         Me.TextBox14.TabIndex = 35
@@ -699,7 +622,7 @@ Partial Class SupervisorTasks
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(47, 359)
+        Me.Label18.Location = New System.Drawing.Point(48, 357)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(87, 13)
         Me.Label18.TabIndex = 34
@@ -708,7 +631,7 @@ Partial Class SupervisorTasks
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(29, 79)
+        Me.Label17.Location = New System.Drawing.Point(84, 82)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(51, 13)
         Me.Label17.TabIndex = 33
@@ -717,7 +640,7 @@ Partial Class SupervisorTasks
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(47, 305)
+        Me.Label16.Location = New System.Drawing.Point(81, 302)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(53, 13)
         Me.Label16.TabIndex = 32
@@ -726,7 +649,7 @@ Partial Class SupervisorTasks
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(29, 45)
+        Me.Label15.Location = New System.Drawing.Point(66, 48)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(68, 13)
         Me.Label15.TabIndex = 31
@@ -745,7 +668,7 @@ Partial Class SupervisorTasks
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(29, 17)
+        Me.Label13.Location = New System.Drawing.Point(14, 13)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(121, 16)
         Me.Label13.TabIndex = 29
@@ -755,7 +678,7 @@ Partial Class SupervisorTasks
         '
         Me.Gassignmentdatagridview.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText
         Me.Gassignmentdatagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Gassignmentdatagridview.Location = New System.Drawing.Point(32, 102)
+        Me.Gassignmentdatagridview.Location = New System.Drawing.Point(32, 110)
         Me.Gassignmentdatagridview.Name = "Gassignmentdatagridview"
         Me.Gassignmentdatagridview.Size = New System.Drawing.Size(458, 146)
         Me.Gassignmentdatagridview.TabIndex = 28
@@ -770,6 +693,7 @@ Partial Class SupervisorTasks
         Me.Text = "SupervisorTasks"
         Me.Assign.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
+        Me.TabPage1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
@@ -789,7 +713,6 @@ Partial Class SupervisorTasks
     Friend WithEvents TextBox17 As TextBox
     Friend WithEvents TextBox16 As TextBox
     Friend WithEvents TextBox15 As TextBox
-    Friend WithEvents Label10 As Label
     Friend WithEvents RichTextBox3 As RichTextBox
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox4 As TextBox
@@ -805,8 +728,6 @@ Partial Class SupervisorTasks
     Friend WithEvents Label9 As Label
     Friend WithEvents ComboBox12 As ComboBox
     Friend WithEvents Label40 As Label
-    Friend WithEvents Label39 As Label
-    Friend WithEvents Label37 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents TasksDataGrid As DataGridView
     Friend WithEvents Label3 As Label
@@ -814,13 +735,9 @@ Partial Class SupervisorTasks
     Friend WithEvents Label33 As Label
     Friend WithEvents Label29 As Label
     Friend WithEvents TabPage3 As TabPage
-    Friend WithEvents Label12 As Label
     Friend WithEvents RichTextBox5 As RichTextBox
     Friend WithEvents Label11 As Label
-    Friend WithEvents Label41 As Label
     Friend WithEvents RichTextBox4 As RichTextBox
-    Friend WithEvents Label24 As Label
-    Friend WithEvents Label21 As Label
     Friend WithEvents TextBox11 As TextBox
     Friend WithEvents TextBox12 As TextBox
     Friend WithEvents TextBox13 As TextBox

@@ -24,7 +24,6 @@ Partial Class DirectorGAForm
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.Label31 = New System.Windows.Forms.Label()
         Me.RichTextBox3 = New System.Windows.Forms.RichTextBox()
         Me.TextBox12 = New System.Windows.Forms.TextBox()
         Me.TextBox11 = New System.Windows.Forms.TextBox()
@@ -61,7 +60,6 @@ Partial Class DirectorGAForm
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Label55 = New System.Windows.Forms.Label()
         Me.TextBox33 = New System.Windows.Forms.TextBox()
-        Me.Label34 = New System.Windows.Forms.Label()
         Me.TextBox21 = New System.Windows.Forms.TextBox()
         Me.TextBox20 = New System.Windows.Forms.TextBox()
         Me.TextBox19 = New System.Windows.Forms.TextBox()
@@ -91,7 +89,6 @@ Partial Class DirectorGAForm
         Me.TextBox13 = New System.Windows.Forms.TextBox()
         Me.Label33 = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.Label52 = New System.Windows.Forms.Label()
         Me.Label51 = New System.Windows.Forms.Label()
         Me.TextBox31 = New System.Windows.Forms.TextBox()
         Me.TextBox30 = New System.Windows.Forms.TextBox()
@@ -112,8 +109,6 @@ Partial Class DirectorGAForm
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.TextBox35 = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Label42 = New System.Windows.Forms.Label()
-        Me.Label43 = New System.Windows.Forms.Label()
         Me.TextBox26 = New System.Windows.Forms.TextBox()
         Me.TextBox27 = New System.Windows.Forms.TextBox()
         Me.TextBox28 = New System.Windows.Forms.TextBox()
@@ -150,7 +145,6 @@ Partial Class DirectorGAForm
         '
         'TabPage1
         '
-        Me.TabPage1.Controls.Add(Me.Label31)
         Me.TabPage1.Controls.Add(Me.RichTextBox3)
         Me.TabPage1.Controls.Add(Me.TextBox12)
         Me.TabPage1.Controls.Add(Me.TextBox11)
@@ -191,15 +185,6 @@ Partial Class DirectorGAForm
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Supervisor Skills"
         Me.TabPage1.UseVisualStyleBackColor = True
-        '
-        'Label31
-        '
-        Me.Label31.AutoSize = True
-        Me.Label31.Location = New System.Drawing.Point(269, 26)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(209, 13)
-        Me.Label31.TabIndex = 75
-        Me.Label31.Text = "Display all GA requests from GAForm Table"
         '
         'RichTextBox3
         '
@@ -414,7 +399,7 @@ Partial Class DirectorGAForm
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(6, 225)
+        Me.Label9.Location = New System.Drawing.Point(7, 225)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(132, 26)
         Me.Label9.TabIndex = 39
@@ -424,7 +409,7 @@ Partial Class DirectorGAForm
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(22, 270)
+        Me.Label10.Location = New System.Drawing.Point(23, 262)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(116, 26)
         Me.Label10.TabIndex = 37
@@ -484,7 +469,6 @@ Partial Class DirectorGAForm
         '
         Me.TabPage2.Controls.Add(Me.Label55)
         Me.TabPage2.Controls.Add(Me.TextBox33)
-        Me.TabPage2.Controls.Add(Me.Label34)
         Me.TabPage2.Controls.Add(Me.TextBox21)
         Me.TabPage2.Controls.Add(Me.TextBox20)
         Me.TabPage2.Controls.Add(Me.TextBox19)
@@ -536,15 +520,6 @@ Partial Class DirectorGAForm
         Me.TextBox33.Name = "TextBox33"
         Me.TextBox33.Size = New System.Drawing.Size(52, 20)
         Me.TextBox33.TabIndex = 109
-        '
-        'Label34
-        '
-        Me.Label34.AutoSize = True
-        Me.Label34.Location = New System.Drawing.Point(303, 15)
-        Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(135, 13)
-        Me.Label34.TabIndex = 108
-        Me.Label34.Text = "Display GAs from GA Table"
         '
         'TextBox21
         '
@@ -789,7 +764,6 @@ Partial Class DirectorGAForm
         '
         'TabPage3
         '
-        Me.TabPage3.Controls.Add(Me.Label52)
         Me.TabPage3.Controls.Add(Me.Label51)
         Me.TabPage3.Controls.Add(Me.TextBox31)
         Me.TabPage3.Controls.Add(Me.TextBox30)
@@ -815,29 +789,19 @@ Partial Class DirectorGAForm
         Me.TabPage3.Text = "Make Assignments"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
-        'Label52
-        '
-        Me.Label52.AutoSize = True
-        Me.Label52.Location = New System.Drawing.Point(50, 526)
-        Me.Label52.Name = "Label52"
-        Me.Label52.Size = New System.Drawing.Size(336, 26)
-        Me.Label52.TabIndex = 45
-        Me.Label52.Text = "Insert into the GA Assignment Table: SupervisorID, GAID, Hours, Sem" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "and Director" &
-    ""
-        '
         'Label51
         '
         Me.Label51.AutoSize = True
-        Me.Label51.Location = New System.Drawing.Point(269, 327)
+        Me.Label51.Location = New System.Drawing.Point(13, 380)
         Me.Label51.Name = "Label51"
-        Me.Label51.Size = New System.Drawing.Size(210, 39)
+        Me.Label51.Size = New System.Drawing.Size(97, 26)
         Me.Label51.TabIndex = 44
-        Me.Label51.Text = "Assigned Semester" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "FORMAT: Semester Year (i.e. Spring 2018)"
+        Me.Label51.Text = "Assigned Semester" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(i.e. Spring 2018)"
         Me.Label51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'TextBox31
         '
-        Me.TextBox31.Location = New System.Drawing.Point(337, 392)
+        Me.TextBox31.Location = New System.Drawing.Point(116, 380)
         Me.TextBox31.Name = "TextBox31"
         Me.TextBox31.Size = New System.Drawing.Size(109, 20)
         Me.TextBox31.TabIndex = 43
@@ -862,7 +826,7 @@ Partial Class DirectorGAForm
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(202, 575)
+        Me.Button1.Location = New System.Drawing.Point(327, 378)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(152, 23)
         Me.Button1.TabIndex = 13
@@ -971,8 +935,6 @@ Partial Class DirectorGAForm
         '
         Me.TabPage4.Controls.Add(Me.TextBox35)
         Me.TabPage4.Controls.Add(Me.Button2)
-        Me.TabPage4.Controls.Add(Me.Label42)
-        Me.TabPage4.Controls.Add(Me.Label43)
         Me.TabPage4.Controls.Add(Me.TextBox26)
         Me.TabPage4.Controls.Add(Me.TextBox27)
         Me.TabPage4.Controls.Add(Me.TextBox28)
@@ -993,64 +955,45 @@ Partial Class DirectorGAForm
         '
         'TextBox35
         '
-        Me.TextBox35.Location = New System.Drawing.Point(456, 22)
+        Me.TextBox35.Location = New System.Drawing.Point(460, 22)
         Me.TextBox35.Name = "TextBox35"
-        Me.TextBox35.Size = New System.Drawing.Size(28, 20)
+        Me.TextBox35.Size = New System.Drawing.Size(32, 20)
         Me.TextBox35.TabIndex = 50
         Me.TextBox35.Visible = False
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(145, 512)
+        Me.Button2.Location = New System.Drawing.Point(171, 473)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(140, 23)
         Me.Button2.TabIndex = 47
-        Me.Button2.Text = "Modify/ Reassign"
+        Me.Button2.Text = "Reassign"
         Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Label42
-        '
-        Me.Label42.AutoSize = True
-        Me.Label42.Location = New System.Drawing.Point(242, 108)
-        Me.Label42.Name = "Label42"
-        Me.Label42.Size = New System.Drawing.Size(84, 13)
-        Me.Label42.TabIndex = 42
-        Me.Label42.Text = "Filter by this sem"
-        '
-        'Label43
-        '
-        Me.Label43.AutoSize = True
-        Me.Label43.Location = New System.Drawing.Point(354, 382)
-        Me.Label43.Name = "Label43"
-        Me.Label43.Size = New System.Drawing.Size(141, 52)
-        Me.Label43.TabIndex = 40
-        Me.Label43.Text = "Display these fields from the " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "GAassignment Entity. " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Can change GA Name " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "and n" &
-    "umber of hours only" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'TextBox26
         '
-        Me.TextBox26.Location = New System.Drawing.Point(145, 433)
+        Me.TextBox26.Location = New System.Drawing.Point(120, 413)
         Me.TextBox26.Name = "TextBox26"
         Me.TextBox26.Size = New System.Drawing.Size(140, 20)
         Me.TextBox26.TabIndex = 38
         '
         'TextBox27
         '
-        Me.TextBox27.Location = New System.Drawing.Point(94, 105)
+        Me.TextBox27.Location = New System.Drawing.Point(120, 104)
         Me.TextBox27.Name = "TextBox27"
         Me.TextBox27.Size = New System.Drawing.Size(126, 20)
         Me.TextBox27.TabIndex = 37
         '
         'TextBox28
         '
-        Me.TextBox28.Location = New System.Drawing.Point(145, 346)
+        Me.TextBox28.Location = New System.Drawing.Point(120, 346)
         Me.TextBox28.Name = "TextBox28"
         Me.TextBox28.Size = New System.Drawing.Size(140, 20)
         Me.TextBox28.TabIndex = 36
         '
         'TextBox29
         '
-        Me.TextBox29.Location = New System.Drawing.Point(145, 379)
+        Me.TextBox29.Location = New System.Drawing.Point(120, 378)
         Me.TextBox29.Name = "TextBox29"
         Me.TextBox29.Size = New System.Drawing.Size(140, 20)
         Me.TextBox29.TabIndex = 35
@@ -1058,7 +1001,7 @@ Partial Class DirectorGAForm
         'Label45
         '
         Me.Label45.AutoSize = True
-        Me.Label45.Location = New System.Drawing.Point(33, 436)
+        Me.Label45.Location = New System.Drawing.Point(27, 418)
         Me.Label45.Name = "Label45"
         Me.Label45.Size = New System.Drawing.Size(87, 13)
         Me.Label45.TabIndex = 34
@@ -1067,7 +1010,7 @@ Partial Class DirectorGAForm
         'Label46
         '
         Me.Label46.AutoSize = True
-        Me.Label46.Location = New System.Drawing.Point(6, 107)
+        Me.Label46.Location = New System.Drawing.Point(26, 107)
         Me.Label46.Name = "Label46"
         Me.Label46.Size = New System.Drawing.Size(88, 13)
         Me.Label46.TabIndex = 33
@@ -1076,7 +1019,7 @@ Partial Class DirectorGAForm
         'Label48
         '
         Me.Label48.AutoSize = True
-        Me.Label48.Location = New System.Drawing.Point(66, 382)
+        Me.Label48.Location = New System.Drawing.Point(26, 385)
         Me.Label48.Name = "Label48"
         Me.Label48.Size = New System.Drawing.Size(36, 13)
         Me.Label48.TabIndex = 31
@@ -1085,7 +1028,7 @@ Partial Class DirectorGAForm
         'Label49
         '
         Me.Label49.AutoSize = True
-        Me.Label49.Location = New System.Drawing.Point(33, 346)
+        Me.Label49.Location = New System.Drawing.Point(22, 349)
         Me.Label49.Name = "Label49"
         Me.Label49.Size = New System.Drawing.Size(88, 13)
         Me.Label49.TabIndex = 30
@@ -1113,7 +1056,7 @@ Partial Class DirectorGAForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(567, 729)
+        Me.ClientSize = New System.Drawing.Size(567, 699)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "DirectorGAForm"
         Me.Text = "DirectorGAForm"
@@ -1137,7 +1080,6 @@ Partial Class DirectorGAForm
 
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents Label31 As Label
     Friend WithEvents RichTextBox3 As RichTextBox
     Friend WithEvents TextBox12 As TextBox
     Friend WithEvents TextBox11 As TextBox
@@ -1172,7 +1114,6 @@ Partial Class DirectorGAForm
     Friend WithEvents Label1 As Label
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents Label34 As Label
     Friend WithEvents TextBox21 As TextBox
     Friend WithEvents TextBox20 As TextBox
     Friend WithEvents TextBox19 As TextBox
@@ -1202,7 +1143,6 @@ Partial Class DirectorGAForm
     Friend WithEvents TextBox13 As TextBox
     Friend WithEvents Label33 As Label
     Friend WithEvents TabPage3 As TabPage
-    Friend WithEvents Label52 As Label
     Friend WithEvents Label51 As Label
     Friend WithEvents TextBox31 As TextBox
     Friend WithEvents TextBox30 As TextBox
@@ -1222,8 +1162,6 @@ Partial Class DirectorGAForm
     Friend WithEvents Label35 As Label
     Friend WithEvents TabPage4 As TabPage
     Friend WithEvents Button2 As Button
-    Friend WithEvents Label42 As Label
-    Friend WithEvents Label43 As Label
     Friend WithEvents TextBox26 As TextBox
     Friend WithEvents TextBox27 As TextBox
     Friend WithEvents TextBox28 As TextBox

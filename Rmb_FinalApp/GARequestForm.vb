@@ -3,9 +3,7 @@ Imports System.Data.OleDb
 Public Class GARequestForm
 
 
-    Private Sub TabPage1_Click(sender As Object, e As EventArgs) Handles TabPage1.Click
 
-    End Sub
 
     Private Sub GARequestForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         GASpreadsheetComboBox.SelectedIndex = 0
@@ -64,4 +62,6 @@ Public Class GARequestForm
     Private Sub AssignTasksToGraduateAssistanttsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AssignTasksToGraduateAssistanttsToolStripMenuItem.Click
         SupervisorTasks.Show()
     End Sub
+
+
 End Class

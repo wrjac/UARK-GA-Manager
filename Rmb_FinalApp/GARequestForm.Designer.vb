@@ -24,6 +24,7 @@ Partial Class GARequestForm
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label26 = New System.Windows.Forms.Label()
         Me.GANeedsTextBox = New System.Windows.Forms.RichTextBox()
         Me.SemesterLabel = New System.Windows.Forms.Label()
         Me.SemesterTextBox = New System.Windows.Forms.TextBox()
@@ -94,6 +95,7 @@ Partial Class GARequestForm
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Label26)
         Me.TabPage1.Controls.Add(Me.GANeedsTextBox)
         Me.TabPage1.Controls.Add(Me.SemesterLabel)
         Me.TabPage1.Controls.Add(Me.SemesterTextBox)
@@ -124,9 +126,19 @@ Partial Class GARequestForm
         Me.TabPage1.Text = "Supervisor Requirements"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Location = New System.Drawing.Point(111, 460)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(221, 26)
+        Me.Label26.TabIndex = 40
+        Me.Label26.Text = "Please select Skills Tab to complete the form." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.Label26.TextAlign = System.Drawing.ContentAlignment.BottomRight
+        '
         'GANeedsTextBox
         '
-        Me.GANeedsTextBox.Location = New System.Drawing.Point(163, 277)
+        Me.GANeedsTextBox.Location = New System.Drawing.Point(178, 298)
         Me.GANeedsTextBox.Name = "GANeedsTextBox"
         Me.GANeedsTextBox.Size = New System.Drawing.Size(243, 124)
         Me.GANeedsTextBox.TabIndex = 39
@@ -135,7 +147,7 @@ Partial Class GARequestForm
         'SemesterLabel
         '
         Me.SemesterLabel.AutoSize = True
-        Me.SemesterLabel.Location = New System.Drawing.Point(138, 120)
+        Me.SemesterLabel.Location = New System.Drawing.Point(110, 155)
         Me.SemesterLabel.Name = "SemesterLabel"
         Me.SemesterLabel.Size = New System.Drawing.Size(51, 13)
         Me.SemesterLabel.TabIndex = 37
@@ -143,21 +155,21 @@ Partial Class GARequestForm
         '
         'SemesterTextBox
         '
-        Me.SemesterTextBox.Location = New System.Drawing.Point(197, 117)
+        Me.SemesterTextBox.Location = New System.Drawing.Point(180, 152)
         Me.SemesterTextBox.Name = "SemesterTextBox"
         Me.SemesterTextBox.Size = New System.Drawing.Size(113, 20)
         Me.SemesterTextBox.TabIndex = 36
         '
         'TextBox11
         '
-        Me.TextBox11.Location = New System.Drawing.Point(196, 41)
+        Me.TextBox11.Location = New System.Drawing.Point(179, 65)
         Me.TextBox11.Name = "TextBox11"
         Me.TextBox11.Size = New System.Drawing.Size(113, 20)
         Me.TextBox11.TabIndex = 35
         '
         'SupervisorIDTextBox
         '
-        Me.SupervisorIDTextBox.Location = New System.Drawing.Point(196, 15)
+        Me.SupervisorIDTextBox.Location = New System.Drawing.Point(179, 33)
         Me.SupervisorIDTextBox.Name = "SupervisorIDTextBox"
         Me.SupervisorIDTextBox.Size = New System.Drawing.Size(113, 20)
         Me.SupervisorIDTextBox.TabIndex = 34
@@ -165,16 +177,16 @@ Partial Class GARequestForm
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(130, 18)
+        Me.Label17.Location = New System.Drawing.Point(62, 36)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(43, 13)
+        Me.Label17.Size = New System.Drawing.Size(96, 13)
         Me.Label17.TabIndex = 33
-        Me.Label17.Text = "Your ID"
+        Me.Label17.Text = "Your Supervisor ID"
         '
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(130, 44)
+        Me.Label18.Location = New System.Drawing.Point(100, 68)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(57, 13)
         Me.Label18.TabIndex = 32
@@ -183,17 +195,18 @@ Partial Class GARequestForm
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(57, 208)
+        Me.Label9.Location = New System.Drawing.Point(31, 243)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(132, 26)
         Me.Label9.TabIndex = 31
         Me.Label9.Text = "Total Estimated Hours " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Needed on a weekly basis" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.Label9.TextAlign = System.Drawing.ContentAlignment.BottomRight
         '
         'GAHoursNeededComboBox
         '
         Me.GAHoursNeededComboBox.FormattingEnabled = True
         Me.GAHoursNeededComboBox.Items.AddRange(New Object() {"10", "20", "30", "40", "50"})
-        Me.GAHoursNeededComboBox.Location = New System.Drawing.Point(195, 213)
+        Me.GAHoursNeededComboBox.Location = New System.Drawing.Point(178, 248)
         Me.GAHoursNeededComboBox.Name = "GAHoursNeededComboBox"
         Me.GAHoursNeededComboBox.Size = New System.Drawing.Size(54, 21)
         Me.GAHoursNeededComboBox.TabIndex = 30
@@ -201,17 +214,18 @@ Partial Class GARequestForm
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(6, 280)
+        Me.Label10.Location = New System.Drawing.Point(12, 301)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(151, 52)
         Me.Label10.TabIndex = 29
         Me.Label10.Text = "List General Tasks a " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "GA may be needed for." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(Type ""none"" if not applicable)"
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.BottomRight
         '
         'ConcentrationPreferredComboBox
         '
         Me.ConcentrationPreferredComboBox.FormattingEnabled = True
         Me.ConcentrationPreferredComboBox.Items.AddRange(New Object() {"Analytics", "ERP", "Enterpise Systems", "Java Development", "Other"})
-        Me.ConcentrationPreferredComboBox.Location = New System.Drawing.Point(197, 143)
+        Me.ConcentrationPreferredComboBox.Location = New System.Drawing.Point(179, 184)
         Me.ConcentrationPreferredComboBox.Name = "ConcentrationPreferredComboBox"
         Me.ConcentrationPreferredComboBox.Size = New System.Drawing.Size(112, 21)
         Me.ConcentrationPreferredComboBox.TabIndex = 28
@@ -219,7 +233,7 @@ Partial Class GARequestForm
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(72, 151)
+        Me.Label11.Location = New System.Drawing.Point(44, 187)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(119, 13)
         Me.Label11.TabIndex = 27
@@ -228,7 +242,7 @@ Partial Class GARequestForm
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(57, 183)
+        Me.Label12.Location = New System.Drawing.Point(29, 218)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(134, 13)
         Me.Label12.TabIndex = 25
@@ -236,21 +250,21 @@ Partial Class GARequestForm
         '
         'GAQuantityTextBox
         '
-        Me.GAQuantityTextBox.Location = New System.Drawing.Point(196, 183)
+        Me.GAQuantityTextBox.Location = New System.Drawing.Point(179, 218)
         Me.GAQuantityTextBox.Name = "GAQuantityTextBox"
-        Me.GAQuantityTextBox.Size = New System.Drawing.Size(40, 20)
+        Me.GAQuantityTextBox.Size = New System.Drawing.Size(53, 20)
         Me.GAQuantityTextBox.TabIndex = 24
         '
         'TextBox7
         '
-        Me.TextBox7.Location = New System.Drawing.Point(197, 91)
+        Me.TextBox7.Location = New System.Drawing.Point(180, 122)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(113, 20)
         Me.TextBox7.TabIndex = 23
         '
         'TextBox8
         '
-        Me.TextBox8.Location = New System.Drawing.Point(197, 65)
+        Me.TextBox8.Location = New System.Drawing.Point(180, 93)
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.Size = New System.Drawing.Size(113, 20)
         Me.TextBox8.TabIndex = 22
@@ -281,7 +295,7 @@ Partial Class GARequestForm
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(148, 93)
+        Me.Label14.Location = New System.Drawing.Point(122, 124)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(35, 13)
         Me.Label14.TabIndex = 18
@@ -290,7 +304,7 @@ Partial Class GARequestForm
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(126, 68)
+        Me.Label15.Location = New System.Drawing.Point(100, 96)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(58, 13)
         Me.Label15.TabIndex = 17
@@ -351,7 +365,7 @@ Partial Class GARequestForm
         '
         'GACommentsTextBox
         '
-        Me.GACommentsTextBox.Location = New System.Drawing.Point(180, 431)
+        Me.GACommentsTextBox.Location = New System.Drawing.Point(142, 431)
         Me.GACommentsTextBox.Name = "GACommentsTextBox"
         Me.GACommentsTextBox.Size = New System.Drawing.Size(231, 55)
         Me.GACommentsTextBox.TabIndex = 32
@@ -359,9 +373,9 @@ Partial Class GARequestForm
         '
         'GAProgramsTextBox
         '
-        Me.GAProgramsTextBox.Location = New System.Drawing.Point(133, 217)
+        Me.GAProgramsTextBox.Location = New System.Drawing.Point(142, 217)
         Me.GAProgramsTextBox.Name = "GAProgramsTextBox"
-        Me.GAProgramsTextBox.Size = New System.Drawing.Size(205, 32)
+        Me.GAProgramsTextBox.Size = New System.Drawing.Size(190, 32)
         Me.GAProgramsTextBox.TabIndex = 31
         Me.GAProgramsTextBox.Text = ""
         '
@@ -438,11 +452,12 @@ Partial Class GARequestForm
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(23, 431)
+        Me.Label24.Location = New System.Drawing.Point(32, 431)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(151, 39)
+        Me.Label24.Size = New System.Drawing.Size(88, 52)
         Me.Label24.TabIndex = 13
-        Me.Label24.Text = "Other Comments:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(Type ""none"" if not applicable)"
+        Me.Label24.Text = "Other Comments:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(Type ""none"" if" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "not applicable)."
+        Me.Label24.TextAlign = System.Drawing.ContentAlignment.BottomRight
         '
         'Label23
         '
@@ -574,11 +589,11 @@ Partial Class GARequestForm
         '
         Me.Label25.AutoSize = True
         Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(20, 21)
+        Me.Label25.Location = New System.Drawing.Point(12, 24)
         Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(130, 16)
+        Me.Label25.Size = New System.Drawing.Size(104, 16)
         Me.Label25.TabIndex = 18
-        Me.Label25.Text = "GA Request Form"
+        Me.Label25.Text = "Request a GA"
         '
         'MenuStrip1
         '
@@ -593,8 +608,8 @@ Partial Class GARequestForm
         '
         Me.FormsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AssignTasksToGraduateAssistanttsToolStripMenuItem})
         Me.FormsToolStripMenuItem.Name = "FormsToolStripMenuItem"
-        Me.FormsToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
-        Me.FormsToolStripMenuItem.Text = "Forms"
+        Me.FormsToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.FormsToolStripMenuItem.Text = "View"
         '
         'AssignTasksToGraduateAssistanttsToolStripMenuItem
         '
@@ -612,7 +627,7 @@ Partial Class GARequestForm
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "GARequestForm"
-        Me.Text = "GA Request"
+        Me.Text = "GA Request Form"
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
@@ -678,4 +693,5 @@ Partial Class GARequestForm
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents FormsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AssignTasksToGraduateAssistanttsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Label26 As Label
 End Class

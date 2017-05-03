@@ -13,7 +13,7 @@ Public Class DirectorGAForm
         Dim gaskillsadapter As New OleDbDataAdapter("select * from ga", reviewdataconnection)
         Dim availablesupervisorsadapter As New OleDbDataAdapter("select DISTINCT s.SupervisorID, concat(SuperVisorFname, ' ', SuperVisorLName) AS SupervisorName, Semester from gassignment gass JOIN supervisor s on s.supervisorid = gass.supervisorid", reviewdataconnection)
         Dim availablegastudentsadapter As New OleDbDataAdapter("select DISTINCT g.gaid, concat(ap.ApplicantFirstName, ' ', ap.ApplicantLastName) As GAName, Semester from gassignment gass JOIN ga g on gass.gaid= g.gaid  JOIN admitted a on g.admittedid = a.admittedid  JOIN applicant ap on ap.applicantid = a.applicantid", reviewdataconnection)
-        Dim gassignmentsadapter As New OleDbDataAdapter("select gass.GAssignmentID, gass.gaid, ApplicantFirstName, ApplicantLastName, Semester, Hours, concat(SupervisorFName, ' ', SuperVisorLname) AS SupervisorName from gassignment gass join ga g on g.gaid = gass.gaid join supervisor s on s.supervisorid = gass.supervisorid join admitted a on g.admittedid = a.admittedid join applicant ap on ap.applicantid = a.ApplicantID", reviewdataconnection)
+        Dim gassignmentsadapter As New OleDbDataAdapter("select gass.GAssignmentID, gass.gaid, concat(ApplicantFirstName, ' ', ApplicantLastName) As ApplicantName, Semester, Hours, concat(SupervisorFName, ' ', SuperVisorLname) AS SupervisorName from gassignment gass join ga g on g.gaid = gass.gaid join supervisor s on s.supervisorid = gass.supervisorid join admitted a on g.admittedid = a.admittedid join applicant ap on ap.applicantid = a.ApplicantID", reviewdataconnection)
 
 
 
@@ -92,8 +92,8 @@ Public Class DirectorGAForm
             'Populate the textbox(s) to the specified column's value
             TextBox35.Text = DataGridView5.Rows(e.RowIndex).Cells(0).Value.ToString()
             TextBox29.Text = DataGridView5.Rows(e.RowIndex).Cells(1).Value.ToString()
-            TextBox28.Text = DataGridView5.Rows(e.RowIndex).Cells(6).Value.ToString()
-            TextBox26.Text = DataGridView5.Rows(e.RowIndex).Cells(5).Value.ToString()
+            TextBox28.Text = DataGridView5.Rows(e.RowIndex).Cells(5).Value.ToString()
+            TextBox26.Text = DataGridView5.Rows(e.RowIndex).Cells(4).Value.ToString()
 
 
         End If
@@ -106,8 +106,8 @@ Public Class DirectorGAForm
         Dim tasksdataset As New DataSet()
         Dim adapter2 As New OleDbDataAdapter("select * from gaform where SupervisorID LIKE'" & Trim(TextBox1.Text) & "%'", reviewdataconnection)
         con.Connection = reviewdataconnection
-            reviewdataconnection.Open()
-            adapter2.Fill(tasksdataset)
+        reviewdataconnection.Open()
+        adapter2.Fill(tasksdataset)
         DataGridView1.DataSource = tasksdataset.Tables(0).DefaultView
         reviewdataconnection.Close()
     End Sub
@@ -153,7 +153,7 @@ Public Class DirectorGAForm
             Dim reviewdataconnection As New OleDbConnection("Provider=SQLNCLI11;Server=msenterprise.waltoncollege.uark.edu;Database=PROJECTS1720;User Id=PROJECTS1720;Password=RR60ci$")
             Dim con As OleDbCommand = New OleDbCommand()
             Dim tasksdataset As New DataSet()
-            Dim adapter2 As New OleDbDataAdapter("select gass.GAssignmentID, gass.GAID, ApplicantFirstName, ApplicantLastName, Semester, Hours, concat(SupervisorFName, ' ', SuperVisorLname) AS SupervisorName from gassignment gass join ga g on g.gaid = gass.gaid join supervisor s on s.supervisorid = gass.supervisorid join admitted a on g.admittedid = a.admittedid join applicant ap on ap.applicantid = a.ApplicantID where Semester LIKE'" & Trim(TextBox27.Text) & "%'", reviewdataconnection)
+            Dim adapter2 As New OleDbDataAdapter("select gass.GAssignmentID, gass.GAID, concat(ApplicantFirstName, ' ', ApplicantLastName) As ApplicantName, Semester, Hours, concat(SupervisorFName, ' ', SuperVisorLname) AS SupervisorName from gassignment gass join ga g on g.gaid = gass.gaid join supervisor s on s.supervisorid = gass.supervisorid join admitted a on g.admittedid = a.admittedid join applicant ap on ap.applicantid = a.ApplicantID where Semester LIKE'" & Trim(TextBox27.Text) & "%'", reviewdataconnection)
             con.Connection = reviewdataconnection
             reviewdataconnection.Open()
             adapter2.Fill(tasksdataset)
@@ -163,7 +163,7 @@ Public Class DirectorGAForm
             Dim reviewdataconnection As New OleDbConnection("Provider=SQLNCLI11;Server=msenterprise.waltoncollege.uark.edu;Database=PROJECTS1720;User Id=PROJECTS1720;Password=RR60ci$")
             Dim con As OleDbCommand = New OleDbCommand()
             Dim tasksdataset As New DataSet()
-            Dim gassignmentsadapter As New OleDbDataAdapter("select gass.GAssignmentID, GAssignmentID, gass.GAID, ApplicantFirstName, ApplicantLastName, Semester, Hours, concat(SupervisorFName, ' ', SuperVisorLname) AS SupervisorName from gassignment gass join ga g on g.gaid = gass.gaid join supervisor s on s.supervisorid = gass.supervisorid join admitted a on g.admittedid = a.admittedid join applicant ap on ap.applicantid = a.ApplicantID", reviewdataconnection)
+            Dim gassignmentsadapter As New OleDbDataAdapter("select gass.GAssignmentID, GAssignmentID, gass.GAID, concat(ApplicantFirstName, ' ', ApplicantLastName) As ApplicantName, Semester, Hours, concat(SupervisorFName, ' ', SuperVisorLname) AS SupervisorName from gassignment gass join ga g on g.gaid = gass.gaid join supervisor s on s.supervisorid = gass.supervisorid join admitted a on g.admittedid = a.admittedid join applicant ap on ap.applicantid = a.ApplicantID", reviewdataconnection)
             con.Connection = reviewdataconnection
             reviewdataconnection.Open()
             gassignmentsadapter.Fill(tasksdataset)
