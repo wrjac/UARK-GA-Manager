@@ -111,8 +111,6 @@ Partial Class DirectorGAForm
         Me.Label35 = New System.Windows.Forms.Label()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.TextBox35 = New System.Windows.Forms.TextBox()
-        Me.TextBox34 = New System.Windows.Forms.TextBox()
-        Me.TextBox32 = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label42 = New System.Windows.Forms.Label()
         Me.Label43 = New System.Windows.Forms.Label()
@@ -122,7 +120,6 @@ Partial Class DirectorGAForm
         Me.TextBox29 = New System.Windows.Forms.TextBox()
         Me.Label45 = New System.Windows.Forms.Label()
         Me.Label46 = New System.Windows.Forms.Label()
-        Me.Label47 = New System.Windows.Forms.Label()
         Me.Label48 = New System.Windows.Forms.Label()
         Me.Label49 = New System.Windows.Forms.Label()
         Me.Label50 = New System.Windows.Forms.Label()
@@ -973,8 +970,6 @@ Partial Class DirectorGAForm
         'TabPage4
         '
         Me.TabPage4.Controls.Add(Me.TextBox35)
-        Me.TabPage4.Controls.Add(Me.TextBox34)
-        Me.TabPage4.Controls.Add(Me.TextBox32)
         Me.TabPage4.Controls.Add(Me.Button2)
         Me.TabPage4.Controls.Add(Me.Label42)
         Me.TabPage4.Controls.Add(Me.Label43)
@@ -984,7 +979,6 @@ Partial Class DirectorGAForm
         Me.TabPage4.Controls.Add(Me.TextBox29)
         Me.TabPage4.Controls.Add(Me.Label45)
         Me.TabPage4.Controls.Add(Me.Label46)
-        Me.TabPage4.Controls.Add(Me.Label47)
         Me.TabPage4.Controls.Add(Me.Label48)
         Me.TabPage4.Controls.Add(Me.Label49)
         Me.TabPage4.Controls.Add(Me.Label50)
@@ -1004,20 +998,6 @@ Partial Class DirectorGAForm
         Me.TextBox35.Size = New System.Drawing.Size(28, 20)
         Me.TextBox35.TabIndex = 50
         Me.TextBox35.Visible = False
-        '
-        'TextBox34
-        '
-        Me.TextBox34.Location = New System.Drawing.Point(226, 379)
-        Me.TextBox34.Name = "TextBox34"
-        Me.TextBox34.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox34.TabIndex = 49
-        '
-        'TextBox32
-        '
-        Me.TextBox32.Location = New System.Drawing.Point(124, 379)
-        Me.TextBox32.Name = "TextBox32"
-        Me.TextBox32.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox32.TabIndex = 48
         '
         'Button2
         '
@@ -1070,9 +1050,9 @@ Partial Class DirectorGAForm
         '
         'TextBox29
         '
-        Me.TextBox29.Location = New System.Drawing.Point(94, 71)
+        Me.TextBox29.Location = New System.Drawing.Point(145, 379)
         Me.TextBox29.Name = "TextBox29"
-        Me.TextBox29.Size = New System.Drawing.Size(126, 20)
+        Me.TextBox29.Size = New System.Drawing.Size(140, 20)
         Me.TextBox29.TabIndex = 35
         '
         'Label45
@@ -1093,19 +1073,10 @@ Partial Class DirectorGAForm
         Me.Label46.TabIndex = 33
         Me.Label46.Text = "Current Semester"
         '
-        'Label47
-        '
-        Me.Label47.AutoSize = True
-        Me.Label47.Location = New System.Drawing.Point(41, 382)
-        Me.Label47.Name = "Label47"
-        Me.Label47.Size = New System.Drawing.Size(53, 13)
-        Me.Label47.TabIndex = 32
-        Me.Label47.Text = "GA Name"
-        '
         'Label48
         '
         Me.Label48.AutoSize = True
-        Me.Label48.Location = New System.Drawing.Point(15, 74)
+        Me.Label48.Location = New System.Drawing.Point(66, 382)
         Me.Label48.Name = "Label48"
         Me.Label48.Size = New System.Drawing.Size(36, 13)
         Me.Label48.TabIndex = 31
@@ -1259,14 +1230,11 @@ Partial Class DirectorGAForm
     Friend WithEvents TextBox29 As TextBox
     Friend WithEvents Label45 As Label
     Friend WithEvents Label46 As Label
-    Friend WithEvents Label47 As Label
     Friend WithEvents Label48 As Label
     Friend WithEvents Label49 As Label
     Friend WithEvents Label50 As Label
     Friend WithEvents DataGridView5 As DataGridView
     Friend WithEvents Label55 As Label
     Friend WithEvents TextBox33 As TextBox
-    Friend WithEvents TextBox34 As TextBox
-    Friend WithEvents TextBox32 As TextBox
     Friend WithEvents TextBox35 As TextBox
 End Class
