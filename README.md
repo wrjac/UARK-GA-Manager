@@ -6,4 +6,6 @@ Application built in .NET that allows professors to assign, modify, and delete t
 3. Inside the newly-cloned UARK-GA-Manager folder, double-click the .sln file
 4. The VS IDE should open, and all related forms for the application should appear on the right-hand sidebar.
 
-If you have any issues setting this up, please send me an [e-mail.](mailto:russelljacobs111@gmail.com)
+If you have any issues setting this up, please send me an [e-mail](mailto:russelljacobs111@gmail.com). 
+
+**NOTE**: If you are in a building this in a linux environment and use mono, the application may not build properly. This mainly is due to SQL statements within the code that span across more than one line, and also various compatibility issues due to me originally starting this in VS. These will be fixed with stored procedures/patches at a later date.
