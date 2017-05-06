@@ -8,4 +8,6 @@ Application built in .NET that allows professors to assign, modify, and delete t
 
 If you have any issues setting this up, please send me an [e-mail](mailto:russelljacobs111@gmail.com). 
 
-**NOTE**: If you are in a building this in a linux environment and use mono, the application may not build properly. This mainly is due to SQL statements within the code that span across more than one line, and also various compatibility issues due to me originally starting this in VS. These will be fixed with stored procedures/patches at a later date.
+#### Some Stipulations
+* If you are in a building this in a linux environment and use mono, the application may not build properly. This mainly is due to SQL statements within the code that span across more than one line, and also various compatibility issues due to me originally starting this in VS. These will be fixed with stored procedures/patches at a later date.
+* I built this for my Information Systems capstone course, and therefore had to follow specific guidelines when progrmaming this (to a certain degree). Therefore, all commits after May 5 will be *personal* commits that I think could be more useful for individuals involved in UARK'S IS grad program.
